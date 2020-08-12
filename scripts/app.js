@@ -2,16 +2,13 @@
 //Angel Ureña💢
 let options = {
   accordion:null
-
 }
 function ret(){
   /*$('.collapsible').collapsible();*/
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems);
-
-    var elems1 = document.querySelectorAll('.collapsible');
-    
-var instances1 = M.Collapsible.init(elems1,options);
+  let elems = document.querySelectorAll('.dropdown-trigger');
+  let instances = M.Dropdown.init(elems);
+  let elems1 = document.querySelectorAll('.collapsible');
+  let instances1 = M.Collapsible.init(elems1,options);
 }
 function changeColor(){
   let y = 0;
@@ -37,7 +34,6 @@ function changeColor(){
 
     return;
 }
-
 class SkemCW extends React.Component { 
     constructor(props){
         super(props);
@@ -47,16 +43,12 @@ class SkemCW extends React.Component {
             
         }
     }
-  
     componentDidMount() {
       let indexOfColor=0;
         changeColor(indexOfColor);
         ret();
         
     }
-
- 
-
     render(){
         return(
             <div>
