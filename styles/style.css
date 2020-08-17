@@ -10,6 +10,18 @@
   top: 50vh;
 }
 
+.img {
+  width: 35vw;
+  vertical-align: sub;
+  position: relative;
+  -webkit-animation-name: change;
+          animation-name: change;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
 @-webkit-keyframes floatingBalls {
   0% {
     top: -10%;
@@ -260,7 +272,7 @@ video {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: #f6f6f6;
+  background-color: #fefefe;
   display: -ms-grid;
   display: grid;
   display: block;
@@ -292,27 +304,7 @@ video {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.img{
-  width: 35vw;
-  vertical-align: sub;
-  position: relative;
-  animation-name: change;
-  animation-delay: 5s;
-  animation-duration: 5s;
-  }
-  
-  @keyframes change{
-    0%   {left:0px; top:0px;}
-    
-    100%  {left:15vw; top:0px; opacity: 0;}
-  
-  }
-  @keyframes change-port{
-    0%   {left:0px; top:0px;}
-    
-    100%  {left:0px; top:20px; opacity: 0;}
-  
-  }
+
 .center {
   position: relative;
   display: inline-block;
@@ -323,7 +315,7 @@ video {
 .STo {
   position: absolute;
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   background-color: #f6f6f6;
   display: -ms-grid;
   display: grid;
@@ -417,136 +409,166 @@ video {
   margin-left: 2vw;
   margin-top: 2vw;
 }
-.SToh{
+
+.SToh {
   font-family: Coolvetica;
   margin-top: 9vw;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 29px;
-color: #333333;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
 }
-.STot{
+
+.STot {
   font-family: Gill Sans MT;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 28px;
-text-align: center;
-color: #000000;
-margin-top: 3vw;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  margin-top: 3vw;
 }
-.OS{
+
+.OS {
   position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: #f6f6f6;
-  display:grid;
+  display: -ms-grid;
+  display: grid;
   display: block;
-  margin-top: 57vw;
+  margin-top: 47vw;
 }
+
 /*Cada left se le suma 24vw para tener orden*/
-.EDA{
+.EDA {
   position: absolute;
   width: 18vw;
   height: 18vw;
   left: 4vw;
-margin-top: 7vw;
+  margin-top: 7vw;
   border-radius: 160.5px;
-  background-color:  #E63C4C;
+  background-color: #E63C4C;
   border: none;
 }
-.AP{
+
+.AP {
   position: absolute;
   width: 18vw;
   height: 18vw;
   left: 28vw;
-margin-top: 7vw;
+  margin-top: 7vw;
   border-radius: 160.5px;
-  background-color:  #FFC872;
+  background-color: #FFC872;
   border: none;
 }
 
-
-.KP{
+.KP {
   position: absolute;
   width: 18vw;
   height: 18vw;
   left: 52vw;
-margin-top: 7vw;
+  margin-top: 7vw;
   border-radius: 160.5px;
-  background-color:  #65C8D0;
+  background-color: #65C8D0;
   border: none;
 }
-.MP{
+
+.MP {
   position: absolute;
   width: 18vw;
   height: 18vw;
   left: 76vw;
-margin-top: 7vw;
+  margin-top: 7vw;
   border-radius: 160.5px;
-  background-color:  #E63C4C;
+  background-color: #E63C4C;
   border: none;
 }
-.MP:onclick{
+
+.MP:onclick {
   background-color: transparent;
 }
-.OSp{
+
+.OSp {
   font-family: Coolvetica;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 77px;
-display: flex;
-align-items: center;
-text-align: center;
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #FFFFFF;
 }
-.OSe{
+
+.OSe {
   font-family: Coolvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 64px;
   line-height: 77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   margin-left: 3vw;
   color: #FFFFFF;
 }
-.OST{
+
+.OST {
   font-family: Coolvetica;
-font-style: normal;
-font-weight: normal;
-font-size: 82px;
-line-height: 98px;
-color: #000000;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 82px;
+  line-height: 98px;
+  color: #000000;
 }
-.OSP{
-font-family: Gill Sans MT;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 42px;
-color: #000000;
+
+.OSP {
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
 }
-.atras{
+
+.atras {
   display: none;
   font-size: 35px;
   margin-right: 45vw;
   bottom: 5vw;
 }
-.ab{
+
+.ab {
   font-family: Gill Sans MT;
-font-style: normal;
-font-weight: normal;
-font-size: 58px;
-line-height: 42px;
-color: #fff;
-border: none;
-background-color: transparent;
-margin-top: 2vw;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 42px;
+  color: #fff;
+  border: none;
+  background-color: transparent;
 }
+
+#systems {
+  min-width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1100;
+  background: white;
+}
+
 @media only screen and (max-width: 700px) {
   .WRi {
     width: 100vw;
