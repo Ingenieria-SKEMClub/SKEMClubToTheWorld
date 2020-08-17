@@ -260,7 +260,7 @@ video {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: #fefefe;
+  background-color: #f6f6f6;
   display: -ms-grid;
   display: grid;
   display: block;
@@ -292,7 +292,27 @@ video {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
+.img{
+  width: 35vw;
+  vertical-align: sub;
+  position: relative;
+  animation-name: change;
+  animation-delay: 5s;
+  animation-duration: 5s;
+  }
+  
+  @keyframes change{
+    0%   {left:0px; top:0px;}
+    
+    100%  {left:15vw; top:0px; opacity: 0;}
+  
+  }
+  @keyframes change-port{
+    0%   {left:0px; top:0px;}
+    
+    100%  {left:0px; top:20px; opacity: 0;}
+  
+  }
 .center {
   position: relative;
   display: inline-block;
@@ -303,7 +323,7 @@ video {
 .STo {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: #f6f6f6;
   display: -ms-grid;
   display: grid;
@@ -346,7 +366,7 @@ video {
   width: 269px;
   height: 269px;
   left: 4vw;
-  bottom: 10vw;
+  bottom: 43vw;
   border-radius: 160.5px;
   background: #157D8A;
 }
@@ -365,8 +385,8 @@ video {
   position: relative;
   width: 269px;
   height: 269px;
-  left: 5vw;
-  bottom: 10vw;
+  left: 4vw;
+  bottom: 43vw;
   border-radius: 160.5px;
   background: white;
 }
@@ -397,7 +417,136 @@ video {
   margin-left: 2vw;
   margin-top: 2vw;
 }
+.SToh{
+  font-family: Coolvetica;
+  margin-top: 9vw;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 29px;
+color: #333333;
+}
+.STot{
+  font-family: Gill Sans MT;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+color: #000000;
+margin-top: 3vw;
+}
+.OS{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f6f6;
+  display:grid;
+  display: block;
+  margin-top: 57vw;
+}
+/*Cada left se le suma 24vw para tener orden*/
+.EDA{
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  left: 4vw;
+margin-top: 7vw;
+  border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}
+.AP{
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  left: 28vw;
+margin-top: 7vw;
+  border-radius: 160.5px;
+  background-color:  #FFC872;
+  border: none;
+}
 
+
+.KP{
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  left: 52vw;
+margin-top: 7vw;
+  border-radius: 160.5px;
+  background-color:  #65C8D0;
+  border: none;
+}
+.MP{
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  left: 76vw;
+margin-top: 7vw;
+  border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}
+.MP:onclick{
+  background-color: transparent;
+}
+.OSp{
+  font-family: Coolvetica;
+font-style: normal;
+font-weight: normal;
+font-size: 50px;
+line-height: 77px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+}
+.OSe{
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 77px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 3vw;
+  color: #FFFFFF;
+}
+.OST{
+  font-family: Coolvetica;
+font-style: normal;
+font-weight: normal;
+font-size: 82px;
+line-height: 98px;
+color: #000000;
+}
+.OSP{
+font-family: Gill Sans MT;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+color: #000000;
+}
+.atras{
+  display: none;
+  font-size: 35px;
+  margin-right: 45vw;
+  bottom: 5vw;
+}
+.ab{
+  font-family: Gill Sans MT;
+font-style: normal;
+font-weight: normal;
+font-size: 58px;
+line-height: 42px;
+color: #fff;
+border: none;
+background-color: transparent;
+margin-top: 2vw;
+}
 @media only screen and (max-width: 700px) {
   .WRi {
     width: 100vw;
