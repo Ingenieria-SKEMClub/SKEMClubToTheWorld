@@ -444,6 +444,17 @@ background-color: #f6f6f6;
     position: fixed;
     z-index: 1100;
     background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    button {
+      position: absolute;
+    }
+    h2{
+      font-size: 36px;
+    }
+    #content{
+      padding: 50px;
+    }
 }
 @media only screen and (max-width: 700px) {
     .WRi{
@@ -523,57 +534,57 @@ background-color: #f6f6f6;
     }
     .cont{
       position: absolute;
-      width: 27vw;
-      height: 37vh;
-      background: #E6E6E6;
-      border-radius: 40px;
-      top: calc(50% - 519.36px/2 + 103.26px);
+      width: 93vw;
+      height: 23vw;
+      top: 44vw;
+      border-radius: 160.5px;
       left: 5vw;
+      background: #e6e6e6;
     }
     .cont1{
-      position: absolute;
-      width: 27vw;
-      height: 37vh;
-      background: #E6E6E6;
-      border-radius: 40px;
-      top: calc(50% - 519.36px/2 + 103.26px);
-      left: 37vw;
+      position: relative;
+      width: 93vw;
+      height: 23vw;
+      top: 61vw;
+      border-radius: 160.5px;
+      left: 5vw;
+      background: #e6e6e6;
     }
     .cont2{
-      position: absolute;
-      width: 27vw;
-      height: 37vh;
-      background: #E6E6E6;
-      border-radius: 40px;
-      top: calc(50% - 519.36px/2 + 103.26px);
-      left: 69vw;
+      position: relative;
+      width: 93vw;
+      height: 23vw;
+      top: 81vw;
+      border-radius: 160.5px;
+      left: 5vw;
+      background: #e6e6e6;
     }
     
     .contc {
       position: absolute;
-      width: 15vw;
-      height: 15vw;
-      bottom: 60vw;
+      width: 25vw;
+      height: 25vw;
+      bottom: 0vw;
       border-radius: 160.5px;
-      left: 6vw;
+      left: 0vw;
       background: #c4c4c4;
     }
     .contc1 {
       position: absolute;
-      width: 15vw;
-      height: 15vw;
-      bottom: 60vw;
+      width: 25vw;
+      height: 25vw;
+      bottom: 0vw;
       border-radius: 160.5px;
-      left: 6vw;
+      left: 0vw;
       background: #157D8A;
     }
     .contc2 {
       position: absolute;
-      width: 15vw;
-      height: 15vw;
-      bottom: 60vw;
+      width: 25vw;
+      height: 25vw;
+      bottom: 0vw;
       border-radius: 160.5px;
-      left: 6vw;
+      left: 0vw;
       background: #ffffff;
     }
     .STot{
@@ -584,39 +595,44 @@ background-color: #f6f6f6;
       line-height: 10px;
       text-align: center;
       color: #000000;
-      margin-top: 3vw;
+      width: 63vw;
+      margin-top: 0vw;
+      margin-left: 25vw;
     }
      .SToh{
+     height: 2vw;
     font-family: Coolvetica;
-    margin-top: 9vw;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  
-  color: #333333;
+    margin-top: 1vw;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    margin-right: 20vw;
+    color: #333333;
   }
     .line{
+      height: 2vw;
       font-size: 10px;
       margin-top: 1vw;
+      margin-right: 20vw;
     }
     .eme {
-      width: 15vw;
-      height: 10vw;
+      width: 24vw;
+      height: 19vw;
       margin-left: 0.5vw;
-      margin-top: 1vw;
+      margin-top: 0vw;
     }
     
     .ad {
-      width: 13vw;
-      height: 13vw;
-      margin-left: 1vw;
-      margin-top: 1vw;
+      width: 22vw;
+      height: 22vw;
+      margin-left: 2vw;
+      margin-top: 2vw;
     }
     
     .micro {
-      width: 15vw;
-      height: 15vw;
-      margin-left: 0vw;
-      margin-top: 0vw;
+      width: 21vw;
+      height: 21vw;
+      margin-left: 2vw;
+      margin-top: 2vw;
     }
 }

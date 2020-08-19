@@ -25,10 +25,10 @@ function changeColor() {
     //console.log(y);
   }, 10000);
   let colors = [
-    "linear-gradient(75.51deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
+   "linear-gradient(75.51deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
     "linear-gradient(76.43deg, #8052C0 -0.49%, rgba(13, 27, 146, 0) 51.03%), linear-gradient(0deg, #386FCB, #386FCB)",
     "linear-gradient(73.69deg, #02A3A3 8.96%, rgba(126, 179, 183, 0) 48.74%), linear-gradient(247.47deg, #65C8D0 -3.23%, #65C8D0 -3.22%)",
-    "linear-gradient(79.16deg, #FFB972 9.61%, rgba(255, 185, 114, 0) 50.05%), linear-gradient(247.47deg, #FFDC72 -3.23%, #FFDC72 43.98%)",
+   "linear-gradient(79.16deg, #FFB972 9.61%, rgba(255, 185, 114, 0) 50.05%), linear-gradient(247.47deg, #FFDC72 -3.23%, #FFDC72 43.98%)",
     "linear-gradient(75.51deg, #E83CA3 1.71%, rgba(232, 94, 60, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
   ];
   let text = [
@@ -59,6 +59,12 @@ class SkemCW extends React.Component {
     super(props);
     this.state = {
       colors: ["black", "white", "green", "yellow", "red"],
+      systemColors: [
+        "linear-gradient(75.51deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
+        "linear-gradient(79.16deg, #FFB972 9.61%, rgba(255, 185, 114, 0) 50.05%), linear-gradient(247.47deg, #FFDC72 -3.23%, #FFDC72 43.98%)",
+        "linear-gradient(73.69deg, #02A3A3 8.96%, rgba(126, 179, 183, 0) 48.74%), linear-gradient(247.47deg, #65C8D0 -3.23%, #65C8D0 -3.22%)",
+        "linear-gradient(75.51deg, #E83CA3 1.71%, rgba(232, 94, 60, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)"
+      ],
       systemMatrix: [
         ["E.D.A", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
         ["Agente de Producción", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
@@ -101,10 +107,20 @@ class SkemCW extends React.Component {
   render() {
     return (
       <div>
-        <div id="systems" style={{display: this.state.isUserUsingSystems ? "" : "none"}}>
+        <div id="systems" style={{
+            display: this.state.isUserUsingSystems ? "" : "none",
+            background: this.state.systemColors[this.state.systemPosition],
+            color: (this.state.systemPosition%3)==0 ? "white" :  "black"
+          }}
+          >
           <button onClick={()=> {this.goBackSystem()}}>Volver</button>
-          <h1>{this.state.systemMatrix[this.state.systemPosition][0]}</h1>
-          <h2>{this.state.systemMatrix[this.state.systemPosition][1]}</h2>
+          <div id='image'>
+            XD
+          </div>
+          <div id='content'>
+            <h1><b>{this.state.systemMatrix[this.state.systemPosition][0]}</b></h1>
+            <h2>{this.state.systemMatrix[this.state.systemPosition][1]}</h2>
+          </div>
         </div>
         
         <div className="contenedor" id="bgc">
@@ -274,10 +290,8 @@ class SkemCW extends React.Component {
                  <p className="line">Ingeniaría</p>
                 </div>
                 <div className="STot">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                  herramientas y soluciones reales en tiempos record.
                 </div>
                  <div className="contc">
                   <img className="eme" src="/IMG/emerson.png"></img>
@@ -289,10 +303,8 @@ class SkemCW extends React.Component {
               <p className="line">Ingeniaría</p>
             </div>
             <div className="STot">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+                 Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                  herramientas y soluciones reales en tiempos record.
             </div>
             <div className="contc1">
               <img className="ad" src="/IMG/ad.jpg"></img>
@@ -304,10 +316,8 @@ class SkemCW extends React.Component {
               <p className="line">Ingeniería</p>
             </div>
             <div className="STot">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. xd Xd XD xD xd .
+                  Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                  herramientas y soluciones reales en tiempos record.
             </div>
             <div className="contc2">
               <img className="micro" src="/IMG/Microsoft.png"></img>
