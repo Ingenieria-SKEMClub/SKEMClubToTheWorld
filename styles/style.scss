@@ -13,6 +13,26 @@
     height: $height;
     left: $left;
 }
+%cont-story{
+  position: absolute;
+  width: 27vw;
+  height: 63vh;
+  background: #E6E6E6;
+  border-radius: 110px;
+  top: calc(55% - 519.36px/2 + 103.26px);
+}
+%circle-story{
+  position: absolute;
+  width: 269px;
+  height: 269px;
+  bottom: 28vw;
+  border-radius: 160.5px;
+  background-color: #C4C4C4;
+}
+@mixin circle-story($left,$background){
+  left: $left;
+  background: $background;
+}
 .img{
     width: 35vw;
     vertical-align: sub;
@@ -120,13 +140,13 @@ body{
   
 }
 .WRT{
-  margin-top: 30px;
+  
   position: relative;
   z-index: 1000;
   font-family: Coolvetica;
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 46px;
   line-height: 43px;
 }
 .brand-logo{
@@ -193,10 +213,10 @@ video{
     animation: floatingBalls 35s linear 0s infinite  ;
 }
 .WD{
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #fefefe;
+    background-color: #f6f6f6;//#fefefe
     display:grid;
     display: block;
 }
@@ -222,73 +242,45 @@ video{
     width: 60vw;
     display: block;
 }
+
 .STo{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f6f6f6;
-    display:grid;
-    display: block;
-    margin-top: 57vw;
+position: relative;
+width: 100vw;
+height: 100vh;
+background-color: #f6f6f6;
+//margin-top: 57vw;
 }
+
 .cont {
-    position: absolute;
-    width: 377.8px;
-    height: 519.36px;
+    @extend %cont-story;
     left: 5vw;
-    top: calc(50% - 519.36px/2 + 103.26px);
-    background: #E6E6E6;
-    border-radius: 110px;
+    
   }
   
   .contc {
-    position: absolute;
-    width: 269px;
-    height: 269px;
-    left: 4vw;
-    bottom: 28vw;
-    border-radius: 160.5px;
-    background-color: #C4C4C4;
+    @extend %circle-story;
+    @include circle-story(4vw, #C4C4C4);
+
   }
   
   .cont1 {
-    position: absolute;
-    width: 377.8px;
-    height: 519.36px;
+    @extend %cont-story;
     left: 37vw;
-    top: calc(50% - 519.36px/2 + 103.26px);
-    background: #E6E6E6;
-    border-radius: 110px;
   }
   
   .contc1 {
-    position: relative;
-    width: 269px;
-    height: 269px;
-    left: 4vw;
-    bottom: 43vw;
-    border-radius: 160.5px;
-    background: #157D8A;
+    @extend %circle-story;
+    @include circle-story(4vw, #157D8A);
   }
   
   .cont2 {
-    position: absolute;
-    width: 377.8px;
-    height: 519.36px;
+    @extend %cont-story;
     left: 69vw;
-    top: calc(50% - 519.36px/2 + 103.26px);
-    background: #E6E6E6;
-    border-radius: 110px;
   }
   
   .contc2 {
-    position: relative;
-    width: 269px;
-    height: 269px;
-    left: 4vw;
-    bottom: 43vw;
-    border-radius: 160.5px;
-    background: white;
+    @extend %circle-story;
+    @include circle-story(4vw, #ffffff);
   }
   
   .StoT {
@@ -322,8 +314,7 @@ video{
     margin-top: 9vw;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 40px;
   color: #333333;
   }
   .STot{
@@ -343,7 +334,7 @@ video{
     background-color: #f6f6f6;
     display:grid;
     display: block;
-    margin-top: 47vw;
+
   }
   /*Cada left se le suma 24vw para tener orden*/
   .EDA{
@@ -484,5 +475,148 @@ video{
     .ibutton:hover{
       height: 7.2vw;
       width: 22.2vw;
+    }
+    .OST{
+      font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 46px;
+    line-height: 98px;
+    color: #000000;
+    }
+    .OSP{
+      font-family: Gill Sans MT;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 0px;
+      color: #000000;
+      }
+    .OSe{
+      font-family: Coolvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+    line-height: 25px;
+    margin-left: 1vw;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .OSp{
+      font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    }
+    .StoT {
+      font-family: Coolvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 46px;
+    }
+    .cont{
+      position: absolute;
+      width: 27vw;
+      height: 37vh;
+      background: #E6E6E6;
+      border-radius: 40px;
+      top: calc(50% - 519.36px/2 + 103.26px);
+      left: 5vw;
+    }
+    .cont1{
+      position: absolute;
+      width: 27vw;
+      height: 37vh;
+      background: #E6E6E6;
+      border-radius: 40px;
+      top: calc(50% - 519.36px/2 + 103.26px);
+      left: 37vw;
+    }
+    .cont2{
+      position: absolute;
+      width: 27vw;
+      height: 37vh;
+      background: #E6E6E6;
+      border-radius: 40px;
+      top: calc(50% - 519.36px/2 + 103.26px);
+      left: 69vw;
+    }
+    
+    .contc {
+      position: absolute;
+      width: 15vw;
+      height: 15vw;
+      bottom: 60vw;
+      border-radius: 160.5px;
+      left: 6vw;
+      background: #c4c4c4;
+    }
+    .contc1 {
+      position: absolute;
+      width: 15vw;
+      height: 15vw;
+      bottom: 60vw;
+      border-radius: 160.5px;
+      left: 6vw;
+      background: #157D8A;
+    }
+    .contc2 {
+      position: absolute;
+      width: 15vw;
+      height: 15vw;
+      bottom: 60vw;
+      border-radius: 160.5px;
+      left: 6vw;
+      background: #ffffff;
+    }
+    .STot{
+      font-family: Gill Sans MT;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 10px;
+      text-align: center;
+      color: #000000;
+      margin-top: 3vw;
+    }
+     .SToh{
+    font-family: Coolvetica;
+    margin-top: 9vw;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  
+  color: #333333;
+  }
+    .line{
+      font-size: 10px;
+      margin-top: 1vw;
+    }
+    .eme {
+      width: 15vw;
+      height: 10vw;
+      margin-left: 0.5vw;
+      margin-top: 1vw;
+    }
+    
+    .ad {
+      width: 13vw;
+      height: 13vw;
+      margin-left: 1vw;
+      margin-top: 1vw;
+    }
+    
+    .micro {
+      width: 15vw;
+      height: 15vw;
+      margin-left: 0vw;
+      margin-top: 0vw;
     }
 }

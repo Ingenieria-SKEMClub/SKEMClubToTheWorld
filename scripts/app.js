@@ -261,28 +261,29 @@ class SkemCW extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+         </div>
 
-        <div className="STo">
-          <div class="center-align">
-            <h1 className="StoT">Historias de personas</h1>
-          </div>
-          <div className="cont">
-            <div class="center-align">
-              <h3 className="SToh">Ivan</h3>
-              <p className="line">Ingeniaría</p>
-            </div>
-            <div className="STot">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </div>
-            <div className="contc">
-              <img className="eme" src="/IMG/emerson.png"></img>
-            </div>
-          </div>
-          <div className="cont1">
+          <div className="STo">
+            <div id="grid_who">
+              <div class="center-align">
+                <h1 className="StoT">Historias de personas</h1>
+              </div>
+              <div className="cont">
+                <div class="center-align">
+                 <h3 className="SToh">Ivan</h3>
+                 <p className="line">Ingeniaría</p>
+                </div>
+                <div className="STot">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </div>
+                 <div className="contc">
+                  <img className="eme" src="/IMG/emerson.png"></img>
+                 </div>
+                 </div>
+           <div className="cont1">
             <div class="center-align">
               <h3 className="SToh">Andre</h3>
               <p className="line">Ingeniaría</p>
@@ -296,23 +297,24 @@ class SkemCW extends React.Component {
             <div className="contc1">
               <img className="ad" src="/IMG/ad.jpg"></img>
             </div>
-          </div>
-          <div className="cont2">
+           </div>
+           <div className="cont2">
             <div class="center-align">
               <h3 className="SToh">Angel</h3>
-              <p className="line">Ingeniaría</p>
+              <p className="line">Ingeniería</p>
             </div>
             <div className="STot">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              nisi ut aliquip ex ea commodo consequat. xd Xd XD xD xd .
             </div>
             <div className="contc2">
               <img className="micro" src="/IMG/Microsoft.png"></img>
             </div>
+             </div>
+             </div>
           </div>
-
           <div className="OS" id="bgo">
             <div id="atra" className="atras">
               <button
@@ -355,9 +357,9 @@ class SkemCW extends React.Component {
                 <p className="OSp">Marco de Producción</p>
               </div>
             </button>
-          </div>
+          </div> 
         </div>
-      </div>
+       
     );
   }
 }
