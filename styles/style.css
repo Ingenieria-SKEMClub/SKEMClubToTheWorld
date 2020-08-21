@@ -411,7 +411,7 @@ video {
 }
 
 .OS {
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: #f6f6f6;
@@ -426,7 +426,7 @@ video {
   width: 18vw;
   height: 18vw;
   left: 4vw;
-  margin-top: 7vw;
+  margin-top: 25vw;
   border-radius: 160.5px;
   background-color: #E63C4C;
   border: none;
@@ -437,7 +437,7 @@ video {
   width: 18vw;
   height: 18vw;
   left: 28vw;
-  margin-top: 7vw;
+  margin-top: 25vw;
   border-radius: 160.5px;
   background-color: #FFC872;
   border: none;
@@ -448,7 +448,7 @@ video {
   width: 18vw;
   height: 18vw;
   left: 52vw;
-  margin-top: 7vw;
+  margin-top: 25vw;
   border-radius: 160.5px;
   background-color: #65C8D0;
   border: none;
@@ -459,7 +459,7 @@ video {
   width: 18vw;
   height: 18vw;
   left: 76vw;
-  margin-top: 7vw;
+  margin-top: 25vw;
   border-radius: 160.5px;
   background-color: #E63C4C;
   border: none;
@@ -563,6 +563,38 @@ video {
   padding: 50px;
 }
 
+.Areas {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f6f6;
+}
+
+.Abutton {
+  height: 7vw;
+  width: 15vw;
+  border-radius: 2rem;
+  border: none;
+  margin-left: 6vw;
+  margin-top: 4vw;
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2vw;
+  line-height: 4vw;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(81.59deg, #2087FF 0%, #D55AF4 100%);
+}
+
+.Aimg {
+  position: relative;
+  width: 25vw;
+  height: 30vw;
+  right: 4vw;
+  bottom: 5vw;
+}
+
 @media only screen and (max-width: 700px) {
   .WRi {
     width: 100vw;
@@ -619,9 +651,9 @@ video {
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 40px;
     line-height: 25px;
-    margin-left: 1vw;
+    margin-left: 5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -635,8 +667,8 @@ video {
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 27px;
+    line-height: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -737,7 +769,7 @@ video {
   .eme {
     width: 24vw;
     height: 19vw;
-    margin-left: 0.5vw;
+    margin-left: 1vw;
     margin-top: 0vw;
   }
   .ad {
@@ -751,6 +783,53 @@ video {
     height: 21vw;
     margin-left: 2vw;
     margin-top: 2vw;
+  }
+  .EDA {
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    left: 10vw;
+    margin-top: 60vw;
+    border-radius: 160.5px;
+    background-color: #E63C4C;
+    border: none;
+  }
+  .AP {
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    left: 55vw;
+    margin-top: 60vw;
+    border-radius: 160.5px;
+    background-color: #FFC872;
+    border: none;
+  }
+  .KP {
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    left: 10vw;
+    margin-top: 100vw;
+    border-radius: 160.5px;
+    background-color: #65C8D0;
+    border: none;
+  }
+  .MP {
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    left: 55vw;
+    margin-top: 100vw;
+    border-radius: 160.5px;
+    background-color: #E63C4C;
+    border: none;
+  }
+  .Aimg {
+    position: relative;
+    width: 32vw;
+    height: 37vw;
+    right: 4vw;
+    bottom: 4vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

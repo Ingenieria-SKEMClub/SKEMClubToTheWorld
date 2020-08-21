@@ -113,9 +113,12 @@ class SkemCW extends React.Component {
             color: (this.state.systemPosition%3)==0 ? "white" :  "black"
           }}
           >
-          <button onClick={()=> {this.goBackSystem()}}>Volver</button>
+          <button class="center-align white-text"
+                className="ab" onClick={()=> {this.goBackSystem()}}><i class="material-icons medium white-text left">
+                  chevron_left
+                </i>Volver</button>
           <div id='image'>
-            XD
+           
           </div>
           <div id='content'>
             <h1><b>{this.state.systemMatrix[this.state.systemPosition][0]}</b></h1>
@@ -131,7 +134,7 @@ class SkemCW extends React.Component {
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
                 <li>
-                  <a href="sass.html">Inicio</a>
+                  <a href="#WR">Inicio</a>
                 </li>
                 <li>
                   <a class="dropdown-trigger " href="#" data-target="dropdown1">
@@ -192,7 +195,7 @@ class SkemCW extends React.Component {
           </div>
         </div>
 
-        <div className="WR">
+        <div className="WR" id='WR'>
           <div className="ball a"></div>
           <div className="ball b"></div>
           <div className="ball c"></div>
@@ -326,6 +329,7 @@ class SkemCW extends React.Component {
              </div>
           </div>
           <div className="OS" id="bgo">
+          <div id="grid_who">
             <div id="atra" className="atras">
               <button
                 class="center-align white-text"
@@ -367,8 +371,55 @@ class SkemCW extends React.Component {
                 <p className="OSp">Marco de Producción</p>
               </div>
             </button>
+           </div>
           </div> 
-        </div>
+          <div className="Areas">
+          <div id="grid_who"></div>
+        
+          <h1 className="StoT" class='center-align'>Áreas</h1>
+          <div class="row">
+
+          <div className="cont">
+                <div class="center-align">
+                 <h3 className="SToh">Ciencia</h3>
+                </div>
+                <div className="STot">
+                 *Aqui se puede poner una breve descripción*
+                </div>
+                <button className="Abutton">¡Descubre mas!</button>
+                 <div className="contc">
+                  <img className="Aimg" src="/IMG/Dirección de Ciencia.png"></img>
+                 </div>
+                 </div>
+           <div className="cont1">
+            <div class="center-align">
+              <h3 className="SToh">Ingeniaría</h3>
+            </div>
+            <div className="STot">
+            *Aqui se puede poner una breve descripción*
+            </div>
+            <button className="Abutton">¡Descubre mas!</button>
+            <div className="contc1">
+              <img className="Aimg" src="/IMG/Dirección de Ingenieria.png"></img>
+            </div>
+           </div>
+           <div className="cont2">
+            <div class="center-align">
+              <h3 className="SToh">Desarrollo Sostenible</h3>
+            </div>
+            <div className="STot">
+            *Aqui se puede poner una breve descripción*
+            </div>
+            <button className="Abutton">¡Descubre mas!</button>
+            <div className="contc2">
+              <img className="Aimg" src="/IMG/Dirección de Desarrollo Sostenible.png"></img>
+            </div>
+             </div>
+</div>
+          </div>
+          </div>
+          
+          
        
     );
   }
