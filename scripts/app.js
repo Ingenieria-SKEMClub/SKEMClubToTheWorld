@@ -80,6 +80,7 @@ class SkemCW extends React.Component {
     let indexOfColor = 0;
     changeColor(indexOfColor);
     ret();
+    this.aback();
   }
   //Change the color of the background by clicking the button 💢🐦
   OS(x) {
@@ -103,6 +104,20 @@ class SkemCW extends React.Component {
     document.getElementById("t").style.display = "block";
     document.getElementById("atra").style.display = "none";
     clearInterval(this.time);
+  }
+  anext(){
+    document.getElementById("back").style.display = "block";
+    document.getElementById("ci").style.display = "none";
+    document.getElementById("ig").style.display = "none";
+    document.getElementById("ds").style.display = "none";
+    document.getElementById("next").style.display = "none";
+  }
+  aback(){
+    document.getElementById("next").style.display = "block";
+    document.getElementById("ci").style.display = "block";
+    document.getElementById("ig").style.display = "block";
+    document.getElementById("ds").style.display = "block";
+    document.getElementById("back").style.display = "none";
   }
   render() {
     return (
@@ -134,7 +149,7 @@ class SkemCW extends React.Component {
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
                 <li>
-                  <a href="#WR">Inicio</a>
+                  <a href="index.html">Inicio</a>
                 </li>
                 <li>
                   <a class="dropdown-trigger " href="#" data-target="dropdown1">
@@ -152,18 +167,18 @@ class SkemCW extends React.Component {
                       </a>
                     </li>
                     <li class="transparent">
-                      <a class="white-text" href="#!">
+                      <a class="white-text" href="#">
                         <i class="material-icons white-text">view_module</i>Área
                       </a>
                     </li>
                     <li class="transparent">
-                      <a class="white-text" href="#!">
+                      <a class="white-text" href="#">
                         <i class="material-icons white-text">import_contacts</i>
                         Historias
                       </a>
                     </li>
                     <li class="transparent">
-                      <a class="white-text" href="#!">
+                      <a class="white-text" href="#Sistemas">
                         <i class="material-icons white-text">cloud</i>Sistemas
                       </a>
                     </li>
@@ -282,7 +297,7 @@ class SkemCW extends React.Component {
           </div>
          </div>
 
-          <div className="STo">
+          <div className="STo" id="Historias">
             <div id="grid_who">
               <div class="center-align">
                 <h1 className="StoT">Historias de personas</h1>
@@ -373,17 +388,19 @@ class SkemCW extends React.Component {
             </button>
            </div>
           </div> 
-          <div className="Areas">
+
+
+          <div className="Areas" >
           <div id="grid_who"></div>
         
           <h1 className="StoT" class='center-align'>Áreas</h1>
           <div class="row">
 
-          <div className="cont">
+          <div id="ci" className="conta">
                 <div class="center-align">
-                 <h3 className="SToh">Ciencia</h3>
+                 <h3 className="Ah">Ciencia</h3>
                 </div>
-                <div className="STot">
+                <div className="At">
                  *Aqui se puede poner una breve descripción*
                 </div>
                 <button className="Abutton">¡Descubre mas!</button>
@@ -391,11 +408,11 @@ class SkemCW extends React.Component {
                   <img className="Aimg" src="/IMG/Dirección de Ciencia.png"></img>
                  </div>
                  </div>
-           <div className="cont1">
+           <div id="ig"className="conta1">
             <div class="center-align">
-              <h3 className="SToh">Ingeniaría</h3>
+              <h3 className="Ah">Ingeniría</h3>
             </div>
-            <div className="STot">
+            <div className="At">
             *Aqui se puede poner una breve descripción*
             </div>
             <button className="Abutton">¡Descubre mas!</button>
@@ -403,17 +420,23 @@ class SkemCW extends React.Component {
               <img className="Aimg" src="/IMG/Dirección de Ingenieria.png"></img>
             </div>
            </div>
-           <div className="cont2">
+           <div id="ds" className="conta2">
             <div class="center-align">
-              <h3 className="SToh">Desarrollo Sostenible</h3>
+              <h3 className="Ah">Desarrollo Sostenible</h3>
             </div>
-            <div className="STot">
+            <div className="At">
             *Aqui se puede poner una breve descripción*
             </div>
             <button className="Abutton">¡Descubre mas!</button>
             <div className="contc2">
               <img className="Aimg" src="/IMG/Dirección de Desarrollo Sostenible.png"></img>
             </div>
+             </div>
+             <div id="next" className="next" >
+             <button  class="right next" onClick={() => this.anext(null)}><i class="medium material-icons ">chevron_right</i></button>
+             </div>
+             <div id="back" className="back" >
+             <button  class="left back" onClick={() => this.aback(null)}><i class="medium material-icons ">chevron_left</i></button>
              </div>
 </div>
           </div>

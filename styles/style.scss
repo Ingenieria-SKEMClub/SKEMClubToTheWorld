@@ -486,6 +486,61 @@ background-color: #f6f6f6;
     right: 4vw;
     bottom: 5vw;
 }
+.At{
+  font-family: Gill Sans MT;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+color: #000000;
+margin-top: 3vw;
+}
+.Ah{
+  font-family: Coolvetica;
+  margin-top: 9vw;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+color: #333333;
+}
+.conta {
+  @extend %cont-story;
+  left: 5vw;
+}
+.conta1 {
+  @extend %cont-story;
+  left: 37vw;
+}
+.conta2 {
+  @extend %cont-story;
+  left: 69vw;
+}
+.next{
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 42px;
+  color: rgb(116, 19, 19);
+  border: none;
+  background-color: transparent;
+  margin-top: 25vh;
+}
+.back{
+
+  //display: none;
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 42px;
+  color: rgb(116, 19, 19);
+  border: none;
+  background-color: transparent;
+  margin-top: 25vh;
+
+}
   
 @media only screen and (max-width: 700px) {
     .WRi{
@@ -709,11 +764,80 @@ background-color: #f6f6f6;
       background-color:  #E63C4C;
       border: none;
     }
+    .Abutton{
+      height: 7vw;
+      width: 20vw;
+      border-radius: 2rem;
+      border: none;
+      margin-left: 27vw;
+      /* margin-top: 4vw; */
+      font-family: Gill Sans MT;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2vw;
+      line-height: 4vw;
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(81.59deg, #2087FF 0%, #D55AF4 100%);
+    }
     .Aimg{
       position: relative;
       width: 32vw;
       height: 37vw;
       right: 4vw;
       bottom: 4vw;
+    
+    }
+  .Ah{
+    height: 3vw;
+   font-family: Coolvetica;
+   margin-top: 1vw;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 24px;
+   margin-right: 20vw;
+   color: #333333;
+  }
+  .At{
+    font-family: Gill Sans MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 10px;
+    text-align: center;
+    color: #000000;
+    width: 63vw;
+    margin-top: 0vw;
+    margin-left: 25vw;
+  }
+  .conta{
+    position: absolute;
+    width: 93vw;
+    height: 23vw;
+    top: 44vw;
+    border-radius: 160.5px;
+    left: 5vw;
+    background: #e6e6e6;
+  }
+  .conta1{
+    position: relative;
+    width: 93vw;
+    height: 23vw;
+    top: 42vw;
+    border-radius: 160.5px;
+    left: 5vw;
+    background: #e6e6e6;
+  }
+  .conta2{
+    position: relative;
+    width: 93vw;
+    height: 23vw;
+    top: 48vw;
+    border-radius: 160.5px;
+    left: 5vw;
+    background: #e6e6e6;
+  }
+  .next{
+    margin-top: 0vh;
   }
 }
