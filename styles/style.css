@@ -10,7 +10,7 @@
   top: 50vh;
 }
 
-.cont, .cont1, .cont2, .conta, .conta1, .conta2 {
+.cont, .cont1, .cont2, .conta {
   position: absolute;
   width: 27vw;
   height: 63vh;
@@ -341,7 +341,7 @@ video {
 }
 
 .contc {
-  left: 4vw;
+  margin-left: 10%;
   background: #C4C4C4;
 }
 
@@ -350,16 +350,16 @@ video {
 }
 
 .contc1 {
-  left: 4vw;
+  margin-left: 10%;
   background: #157D8A;
 }
 
 .cont2 {
-  left: 69vw;
+  margin-left: 10%;
 }
 
 .contc2 {
-  left: 4vw;
+  margin-left: 10%;
   background: #ffffff;
 }
 
@@ -388,6 +388,17 @@ video {
   height: 15vw;
   margin-left: 2vw;
   margin-top: 2vw;
+}
+
+.Hbox {
+  width: 80%;
+  margin-left: 10%;
+  height: 60vh;
+  background: #E6E6E6;
+  margin-top: 10vw;
+  border-radius: 75px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .SToh {
@@ -570,36 +581,79 @@ video {
   background-color: #f6f6f6;
 }
 
+#AreasT {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 82px;
+  line-height: 98px;
+  text-align: center;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  color: #000000;
+}
+
+.Abox {
+  width: 70%;
+  margin-left: 15%;
+  height: 60vh;
+  background: #E6E6E6;
+  margin-top: 10vw;
+  border-radius: 75px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 .Abutton {
-  height: 7vw;
-  width: 15vw;
-  border-radius: 2rem;
+  margin-top: 2vh;
+  width: 10vw;
+  height: 60px;
+  border-radius: 10px;
   border: none;
-  margin-left: 6vw;
-  margin-top: 4vw;
   font-family: Gill Sans MT;
   font-style: normal;
   font-weight: normal;
-  font-size: 2vw;
-  line-height: 4vw;
+  font-size: 20px;
   text-align: center;
   color: #ffffff;
   background: linear-gradient(81.59deg, #2087FF 0%, #D55AF4 100%);
 }
 
 .Aimg {
-  position: relative;
-  width: 25vw;
-  height: 30vw;
-  right: 4vw;
-  bottom: 5vw;
+  margin-top: -8vw;
+  width: 15vw;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.aTitleBox {
+  border-bottom: solid;
+  border-bottom-color: #C4C4C4;
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.aTextBox {
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+#DS {
+  margin-top: -16px !important;
 }
 
 .At {
   font-family: Gill Sans MT;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 10px;
   line-height: 28px;
   text-align: center;
   color: #000000;
@@ -615,19 +669,8 @@ video {
   color: #333333;
 }
 
-.conta {
-  left: 5vw;
-}
-
-.conta1 {
-  left: 37vw;
-}
-
-.conta2 {
-  left: 69vw;
-}
-
 .next {
+  position: absolute;
   font-family: Gill Sans MT;
   font-style: normal;
   font-weight: normal;
@@ -636,10 +679,12 @@ video {
   color: #741313;
   border: none;
   background-color: transparent;
-  margin-top: 25vh;
+  top: 55vh;
+  margin-left: 95vw;
 }
 
 .back {
+  position: relative;
   font-family: Gill Sans MT;
   font-style: normal;
   font-weight: normal;
@@ -648,7 +693,12 @@ video {
   color: #741313;
   border: none;
   background-color: transparent;
-  margin-top: 25vh;
+  bottom: 21vw;
+}
+
+.box {
+  width: 100%;
+  background: red;
 }
 
 @media only screen and (max-width: 700px) {
@@ -881,19 +931,6 @@ video {
     border: none;
   }
   .Abutton {
-    height: 7vw;
-    width: 20vw;
-    border-radius: 2rem;
-    border: none;
-    margin-left: 27vw;
-    /* margin-top: 4vw; */
-    font-family: Gill Sans MT;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2vw;
-    line-height: 4vw;
-    text-align: center;
-    color: #ffffff;
     background: linear-gradient(81.59deg, #2087FF 0%, #D55AF4 100%);
   }
   .Aimg {
@@ -924,33 +961,6 @@ video {
     width: 63vw;
     margin-top: 0vw;
     margin-left: 25vw;
-  }
-  .conta {
-    position: absolute;
-    width: 93vw;
-    height: 23vw;
-    top: 44vw;
-    border-radius: 160.5px;
-    left: 5vw;
-    background: #e6e6e6;
-  }
-  .conta1 {
-    position: relative;
-    width: 93vw;
-    height: 23vw;
-    top: 42vw;
-    border-radius: 160.5px;
-    left: 5vw;
-    background: #e6e6e6;
-  }
-  .conta2 {
-    position: relative;
-    width: 93vw;
-    height: 23vw;
-    top: 48vw;
-    border-radius: 160.5px;
-    left: 5vw;
-    background: #e6e6e6;
   }
   .next {
     margin-top: 0vh;

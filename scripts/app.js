@@ -107,6 +107,8 @@ class SkemCW extends React.Component {
   }
   anext(){
     document.getElementById("back").style.display = "block";
+    document.getElementById("ar").style.display = "block";
+    document.getElementById("li").style.display = "block";
     document.getElementById("ci").style.display = "none";
     document.getElementById("ig").style.display = "none";
     document.getElementById("ds").style.display = "none";
@@ -117,6 +119,8 @@ class SkemCW extends React.Component {
     document.getElementById("ci").style.display = "block";
     document.getElementById("ig").style.display = "block";
     document.getElementById("ds").style.display = "block";
+    document.getElementById("ar").style.display = "none";
+    document.getElementById("li").style.display = "none";
     document.getElementById("back").style.display = "none";
   }
   render() {
@@ -197,8 +201,8 @@ class SkemCW extends React.Component {
             <p className="Slogan" id="text">
               Ejectuamos ideas geniales.
             </p>
-            <div class="left">
-              <button className="ibutton" id="bs">
+            <div class="left ">
+              <button  className="ibutton" id="bs">
                 ¡Descubre más!
               </button>
             </div>
@@ -302,46 +306,56 @@ class SkemCW extends React.Component {
               <div class="center-align">
                 <h1 className="StoT">Historias de personas</h1>
               </div>
-              <div className="cont">
+              <div class="row">
+              <div class="col s12 l4">
+                <div class="center-align"> 
+                  <div className="Hbox" > 
+                    <div class="center-align">
+                    <img className="Aimg " src="/IMG/emerson.png"></img>
+                      <div className="aTitleBox">
+                        <h3>Emerson</h3>
+                      </div>
+                      <h3 className="aTextBox" >
+                      Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                      herramientas y soluciones reales en tiempos record.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 l4">
                 <div class="center-align">
-                 <h3 className="SToh">Ivan</h3>
-                 <p className="line">Ingeniaría</p>
+                  <div className="Hbox" >
+                  <div class="center-align">
+                    <img className="Aimg " src="/IMG/advisicon.png"></img>
+                    <div className="aTitleBox">
+                        <h3>Advisicon</h3>
+                    </div>
+                    <h3 className="aTextBox" >
+                    Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                    herramientas y soluciones reales en tiempos record.</h3>
+                  </div>
+                  </div>
                 </div>
-                <div className="STot">
-                  Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
-                  herramientas y soluciones reales en tiempos record.
+              </div>
+              <div class="col s12 l4">
+                <div class="center-align">
+                  <div className="Hbox" >
+                  <div class="center-align" >
+                  <div >
+                    <img className="Aimg" src="/IMG/Microsoft.png"></img>
+                    </div>
+                      <div className="aTitleBox" >
+                        <h3 >Microsoft</h3>
+                      </div>
+                        <h3 className="aTextBox" >
+                        Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                        herramientas y soluciones reales en tiempos record.</h3>
+                    </div>
+                  </div>
                 </div>
-                 <div className="contc">
-                  <img className="eme" src="/IMG/emerson.png"></img>
-                 </div>
-                 </div>
-           <div className="cont1">
-            <div class="center-align">
-              <h3 className="SToh">Andre</h3>
-              <p className="line">Ingeniaría</p>
-            </div>
-            <div className="STot">
-                 Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
-                  herramientas y soluciones reales en tiempos record.
-            </div>
-            <div className="contc1">
-              <img className="ad" src="/IMG/ad.jpg"></img>
-            </div>
-           </div>
-           <div className="cont2">
-            <div class="center-align">
-              <h3 className="SToh">Angel</h3>
-              <p className="line">Ingeniería</p>
-            </div>
-            <div className="STot">
-                  Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
-                  herramientas y soluciones reales en tiempos record.
-            </div>
-            <div className="contc2">
-              <img className="micro" src="/IMG/Microsoft.png"></img>
-            </div>
-             </div>
-             </div>
+              </div>
+              </div>
+              </div>
           </div>
           <div className="OS" id="bgo">
           <div id="grid_who">
@@ -389,59 +403,101 @@ class SkemCW extends React.Component {
            </div>
           </div> 
 
-
-          <div className="Areas" >
-          <div id="grid_who"></div>
-        
-          <h1 className="StoT" class='center-align'>Áreas</h1>
-          <div class="row">
-
-          <div id="ci" className="conta">
+          <div className="Areas">
+            <div class="center-align">
+              <p id="AreasT" >Áreas</p>
+            </div>
+            <div class="row">
+              <div class="col s12 l4">
+                <div class="center-align"> 
+                  <div className="Abox" id="ci"> 
+                    <div class="center-align">
+                    <img className="Aimg" src="/IMG/Dirección de Ciencia.png"></img>
+                      <div className="aTitleBox">
+                        <h3>Ciencia</h3>
+                      </div>
+                      <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
+                      <button className="Abutton">¡Descubre más!</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 l4">
                 <div class="center-align">
-                 <h3 className="Ah">Ciencia</h3>
+                  <div className="Abox"  id="ig">
+                  <div class="center-align">
+                    <img className="Aimg" src="/IMG/Dirección de Ingenieria.png"></img>
+                    <div className="aTitleBox">
+                        <h3>Ingenieria</h3>
+                    </div>
+                    <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
+                    <button className="Abutton">¡Descubre más!</button>
+                  </div>
+                  </div>
                 </div>
-                <div className="At">
-                 *Aqui se puede poner una breve descripción*
+              </div>
+              <div class="col s12 l4">
+                <div class="center-align">
+                  <div className="Abox" id="ds">
+                  <div class="center-align" >
+                    <img className="Aimg" src="/IMG/Dirección de Desarrollo Sostenible.png"></img>
+                      <div className="aTitleBox" >
+                        <h3 id="DS">Desarrollo Sostenible</h3>
+                      </div>
+                        <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
+                        <button className="Abutton">¡Descubre más!</button>
+                    </div>
+                  </div>
                 </div>
-                <button className="Abutton">¡Descubre mas!</button>
-                 <div className="contc">
-                  <img className="Aimg" src="/IMG/Dirección de Ciencia.png"></img>
-                 </div>
-                 </div>
-           <div id="ig"className="conta1">
-            <div class="center-align">
-              <h3 className="Ah">Ingeniría</h3>
+              </div>
+              <div class="col s12  l2">
+
+              </div>
+              <div class="col s12  l4">
+                <div class="center-align">
+                  <div className="Abox" id="ar">
+                  <div class="center-align" >
+                    <img className="Aimg" src="/IMG/Dirección de Arte.png"></img>
+                    <div className="aTitleBox">
+                        <h3>Arte</h3>
+                    </div>
+                    <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
+                    <button className="Abutton">¡Descubre más!</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12  l4">
+                <div class="center-align">
+                  <div className="Abox" id="li">
+                  <div class="center-align" >
+                    <img className="Aimg" src="/IMG/Dirección de Liderazgo.png"></img>
+                    <div className="aTitleBox" >
+                      <h3>Liderazgo</h3>
+                    </div>
+                      <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
+                      <button className="Abutton">¡Descubre más!</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="At">
-            *Aqui se puede poner una breve descripción*
+            <div >
+              <div class="left-lign">
+                <button className="back" id="back" onClick={() => this.aback()}><i class="medium material-icons">keyboard_arrow_left</i></button>
+              </div>
+              </div>
+              <div>
+              <div class="right-align">
+                <button className="next" id="next" onClick={() => this.anext()}><i class="medium material-icons">keyboard_arrow_right</i></button>
+              </div>
+              </div>
             </div>
-            <button className="Abutton">¡Descubre mas!</button>
-            <div className="contc1">
-              <img className="Aimg" src="/IMG/Dirección de Ingenieria.png"></img>
-            </div>
-           </div>
-           <div id="ds" className="conta2">
-            <div class="center-align">
-              <h3 className="Ah">Desarrollo Sostenible</h3>
-            </div>
-            <div className="At">
-            *Aqui se puede poner una breve descripción*
-            </div>
-            <button className="Abutton">¡Descubre mas!</button>
-            <div className="contc2">
-              <img className="Aimg" src="/IMG/Dirección de Desarrollo Sostenible.png"></img>
-            </div>
-             </div>
-             <div id="next" className="next" >
-             <button  class="right next" onClick={() => this.anext(null)}><i class="medium material-icons ">chevron_right</i></button>
-             </div>
-             <div id="back" className="back" >
-             <button  class="left back" onClick={() => this.aback(null)}><i class="medium material-icons ">chevron_left</i></button>
-             </div>
-</div>
           </div>
-          </div>
-          
+         
+
+        
+        
           
        
     );
