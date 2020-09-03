@@ -22,7 +22,6 @@ function changeColor() {
     document.getElementById("text").innerHTML = text[y];
     document.getElementById("img").innerHTML = img[y];
     document.getElementById("bs").style.boxShadow = shadow[y];
-    //console.log(y);
   }, 10000);
   let colors = [
    "linear-gradient(75.51deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
@@ -39,11 +38,11 @@ function changeColor() {
     "Ejectuamos ideas con impulso.",
   ];
   let img = [
-    "<img class='img' src='/IMG/Dirección de Arte.png' > </img>",
-    "<img   class='img' src='/IMG/Dirección de Ciencia.png' ></img>",
-    "<img class='img' src='/IMG/Dirección de Ingenieria.png'></img>",
-    "<img class='img' src='/IMG/Dirección de Desarrollo Sostenible.png'></img>",
-    "<img class='img' src='/IMG/Dirección de Liderazgo.png'></img>",
+    "<img class='img' src='/IMG/Direccion de Arte.png' > </img>",
+    "<img   class='img' src='/IMG/Direccion de Ciencia.png' ></img>",
+    "<img class='img' src='/IMG/Direccion de Ingenieria.png'></img>",
+    "<img class='img' src='/IMG/Direccion de Desarrollo Sostenible.png'></img>",
+    "<img class='img' src='/IMG/Direccion de Liderazgo.png'></img>",
   ];
   let shadow = [
     "-5px 10px  rgb(249, 101, 3)",
@@ -63,13 +62,34 @@ class SkemCW extends React.Component {
         "linear-gradient(75.51deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
         "linear-gradient(79.16deg, #FFB972 9.61%, rgba(255, 185, 114, 0) 50.05%), linear-gradient(247.47deg, #FFDC72 -3.23%, #FFDC72 43.98%)",
         "linear-gradient(73.69deg, #02A3A3 8.96%, rgba(126, 179, 183, 0) 48.74%), linear-gradient(247.47deg, #65C8D0 -3.23%, #65C8D0 -3.22%)",
-        "linear-gradient(75.51deg, #E83CA3 1.71%, rgba(232, 94, 60, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)"
+        "linear-gradient(75.51deg, #E83CA3 1.71%, rgba(232, 94, 60, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
+        "linear-gradient(76.43deg, #8052C0 -0.49%, rgba(13, 27, 146, 0) 51.03%), linear-gradient(0deg, #386FCB, #386FCB)",
+        "white"
       ],
       systemMatrix: [
         ["E.D.A", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
         ["Agente de Producción", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
         ["KARMA PAPERS", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
-        ["Marco de Producción", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"]
+        ["Marco de Producción", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
+        ["KARMA PAPERS", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
+        ["Ciencia", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
+        ["Ingenieria", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
+        ["Desarrollo Sostenible", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
+        ["Arte", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
+        ["Liderazgo", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"]
+        
+      ],
+      systemImages: [
+        "/IMG/Direccion de Liderazgo.png",
+        "/IMG/Direccion de Desarrollo Sostenible.png",
+        "/IMG/Direccion de Ingenieria.png",
+        "/IMG/Direccion de Arte.png",
+        "/IMG/Direccion de Ciencia.png",
+        "/IMG/Direccion de Ciencia.png",
+        "/IMG/Direccion de Ingenieria.png",
+        "/IMG/Direccion de Desarrollo Sostenible.png",
+        "/IMG/Direccion de Arte.png",
+        "/IMG/Direccion de Liderazgo.png"
       ],
       isUserUsingSystems: false,
       systemPosition: 0,
@@ -126,18 +146,33 @@ class SkemCW extends React.Component {
   render() {
     return (
       <div>
+
         <div id="systems" style={{
             display: this.state.isUserUsingSystems ? "" : "none",
             background: this.state.systemColors[this.state.systemPosition],
-            color: (this.state.systemPosition%3)==0 ? "white" :  "black"
+            color: (this.state.systemPosition===3) ? "white" :  "black"
           }}
           >
           <button class="center-align white-text"
-                className="ab" onClick={()=> {this.goBackSystem()}}><i class="material-icons medium white-text left">
+                className="ab" onClick={()=> {this.goBackSystem()}}
+                style={{color: (this.state.systemPosition<5) ? "white" :  "black"}}
+                ><i class="material-icons medium  left" style={{color: (this.state.systemPosition<4) ? "white" :  "black"}}>
                   chevron_left
-                </i>Volver</button>
+                </i></button>
+                <button class="center-align white-text"
+                className="kpbtn" onClick={()=> {this.OS(4)}}
+                style={{color: "white"}}
+                ><i class="material-icons medium  left" style={{display: (this.state.systemPosition==2) ? "block" :  "none"}}>
+                  chevron_right
+                </i></button>
+                <button class="center-align white-text"
+                className="kpbtnb" onClick={()=> {this.OS(2)}}
+                style={{color: "white"}}
+                ><i class="material-icons medium  left" style={{display: (this.state.systemPosition==4) ? "block" :  "none"}}>
+                  chevron_left
+                </i></button>
           <div id='image'>
-           
+          <img class="Simg" src={this.state.systemImages[this.state.systemPosition]}></img>
           </div>
           <div id='content'>
             <h1><b>{this.state.systemMatrix[this.state.systemPosition][0]}</b></h1>
@@ -208,7 +243,7 @@ class SkemCW extends React.Component {
             </div>
             <div class="right">
               <div id="img" className="img">
-                <img class="img" src="/IMG/Dirección de Arte.png"></img>
+                <img class="img" src="/IMG/Direccion de Arte.png"></img>
               </div>
             </div>
           </div>
@@ -308,29 +343,27 @@ class SkemCW extends React.Component {
               </div>
               <div class="row">
               <div class="col s12 l4">
-                <div class="center-align"> 
-                  <div className="Hbox" > 
+                  <div className="Hbox"> 
                     <div class="center-align">
-                    <img className="Aimg " src="/IMG/emerson.png"></img>
-                      <div className="aTitleBox">
+                    <img  className="Himg" src="/IMG/emerson.png"></img>
+                      <div className="hTitleBox">
                         <h3>Emerson</h3>
                       </div>
-                      <h3 className="aTextBox" >
+                      <h3 className="hTextBox" >
                       Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                       herramientas y soluciones reales en tiempos record.</h3>
                     </div>
                   </div>
-                </div>
               </div>
               <div class="col s12 l4">
                 <div class="center-align">
                   <div className="Hbox" >
                   <div class="center-align">
-                    <img className="Aimg " src="/IMG/advisicon.png"></img>
-                    <div className="aTitleBox">
+                    <img className="Himg " src="/IMG/advisicon.png"></img>
+                    <div className="hTitleBox">
                         <h3>Advisicon</h3>
                     </div>
-                    <h3 className="aTextBox" >
+                    <h3 className="hTextBox" >
                     Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                     herramientas y soluciones reales en tiempos record.</h3>
                   </div>
@@ -342,12 +375,12 @@ class SkemCW extends React.Component {
                   <div className="Hbox" >
                   <div class="center-align" >
                   <div >
-                    <img className="Aimg" src="/IMG/Microsoft.png"></img>
+                    <img className="Himg" src="/IMG/Microsoft.png"></img>
                     </div>
-                      <div className="aTitleBox" >
+                      <div className="hTitleBox" >
                         <h3 >Microsoft</h3>
                       </div>
-                        <h3 className="aTextBox" >
+                        <h3 className="hTextBox" >
                         Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                         herramientas y soluciones reales en tiempos record.</h3>
                     </div>
@@ -412,12 +445,12 @@ class SkemCW extends React.Component {
                 <div class="center-align"> 
                   <div className="Abox" id="ci"> 
                     <div class="center-align">
-                    <img className="Aimg" src="/IMG/Dirección de Ciencia.png"></img>
+                    <img className="Aimg" src="/IMG/Direccion de Ciencia.png"></img>
                       <div className="aTitleBox">
                         <h3>Ciencia</h3>
                       </div>
                       <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
-                      <button className="Abutton">¡Descubre más!</button>
+                      <button className="Abutton" onClick={() => this.OS(5)} >¡Descubre más!</button>
                     </div>
                   </div>
                 </div>
@@ -426,12 +459,12 @@ class SkemCW extends React.Component {
                 <div class="center-align">
                   <div className="Abox"  id="ig">
                   <div class="center-align">
-                    <img className="Aimg" src="/IMG/Dirección de Ingenieria.png"></img>
+                    <img className="Aimg" src="/IMG/Direccion de Ingenieria.png"></img>
                     <div className="aTitleBox">
                         <h3>Ingenieria</h3>
                     </div>
                     <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
-                    <button className="Abutton">¡Descubre más!</button>
+                    <button className="Abutton" onClick={() => this.OS(6)} >¡Descubre más!</button>
                   </div>
                   </div>
                 </div>
@@ -440,12 +473,12 @@ class SkemCW extends React.Component {
                 <div class="center-align">
                   <div className="Abox" id="ds">
                   <div class="center-align" >
-                    <img className="Aimg" src="/IMG/Dirección de Desarrollo Sostenible.png"></img>
+                    <img className="Aimg" src="/IMG/Direccion de Desarrollo Sostenible.png"></img>
                       <div className="aTitleBox" >
                         <h3 id="DS">Desarrollo Sostenible</h3>
                       </div>
                         <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
-                        <button className="Abutton">¡Descubre más!</button>
+                        <button className="Abutton" onClick={() => this.OS(7)} >¡Descubre más!</button>
                     </div>
                   </div>
                 </div>
@@ -457,32 +490,32 @@ class SkemCW extends React.Component {
                 <div class="center-align">
                   <div className="Abox" id="ar">
                   <div class="center-align" >
-                    <img className="Aimg" src="/IMG/Dirección de Arte.png"></img>
+                    <img className="Aimg" src="/IMG/Direccion de Arte.png"></img>
                     <div className="aTitleBox">
                         <h3>Arte</h3>
                     </div>
                     <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
-                    <button className="Abutton">¡Descubre más!</button>
+                    <button className="Abutton" onClick={() => this.OS(8)}>¡Descubre más!</button>
                   </div>
                   </div>
                 </div>
               </div>
-              <div class="col s12  l4">
+              <div class="col s12  l4 ">
                 <div class="center-align">
                   <div className="Abox" id="li">
                   <div class="center-align" >
-                    <img className="Aimg" src="/IMG/Dirección de Liderazgo.png"></img>
+                    <img className="Aimg" src="/IMG/Direccion de Liderazgo.png"></img>
                     <div className="aTitleBox" >
                       <h3>Liderazgo</h3>
                     </div>
                       <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
-                      <button className="Abutton">¡Descubre más!</button>
+                      <button className="Abutton" onClick={() => this.OS(9)}>¡Descubre más!</button>
                   </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div >
+            <div>
               <div class="left-lign">
                 <button className="back" id="back" onClick={() => this.aback()}><i class="medium material-icons">keyboard_arrow_left</i></button>
               </div>
@@ -493,12 +526,47 @@ class SkemCW extends React.Component {
               </div>
               </div>
             </div>
-          </div>
-         
 
-        
-        
-          
+            <div className="Areas">
+            <div class="center-align">
+              <p id="AreasT" >Galeria</p>
+            </div>
+        <div className="row1">
+        <div className="column1">
+
+        <img style={{width:'100%'}} src="/IMG/IMG5.jpg"></img>
+        <img style={{width:'100%'}} src="/IMG/IMG2.jpg"></img>
+
+        </div>
+
+        <div className="column1">
+        <img style={{width:'100%'}} src="/IMG/IMG6.jpg"></img>
+
+
+
+         </div>
+
+        <div className="column1">
+        <img style={{width:'100%'}} src="/IMG/IMG2.jpg"></img>
+        <img style={{width:'100%'}} src="/IMG/IMG1.jpg"></img>
+
+
+        </div>
+
+        <div className="column1">
+        <img style={{width:'100%'}} src="/IMG/IMG4.jpg"></img>
+        <img style={{width:'100%'}} src="/IMG/IMG4.jpg"></img>
+       
+  
+</div>
+
+        </div>  
+
+
+            
+            </div>
+
+    </div>
        
     );
   }
