@@ -33,6 +33,34 @@
   margin-bottom: 10px;
 }
 
+.input-field label {
+  color: blue !important;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: blue !important;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid blue !important;
+  -webkit-box-shadow: 0 1px 0 0 blue !important;
+          box-shadow: 0 1px 0 0 blue !important;
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid blue !important;
+  -webkit-box-shadow: 0 1px 0 0 blue !important;
+          box-shadow: 0 1px 0 0 blue !important;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: blue !important;
+}
+
 .Simg {
   width: 35vw;
   vertical-align: sub;
@@ -141,7 +169,7 @@ body {
 }
 
 /*.transparent{
-    position: fixed!important;
+  position: fixed!important;
 }*/
 .Logo {
   font-family: Coolvetica;
@@ -833,7 +861,42 @@ video {
   width: 100%;
 }
 
-@media only screen and (max-width: 700px) {
+.CNT {
+  position: relative;
+  width: 100vw;
+  height: 110vh;
+}
+
+.cnt {
+  width: 75vw;
+  height: 60vh;
+  margin: auto;
+  background: rgba(232, 60, 76, 0.96);
+  top: 14Vh;
+  position: relative;
+}
+
+.bcnt {
+  margin-left: 55vh;
+}
+
+#submit {
+  width: 10vw;
+  height: 5vh;
+}
+
+#t {
+  color: #000000;
+}
+
+.footer {
+  position: relative;
+  width: 100vw;
+  height: 45vh;
+  background-color: #2087FF;
+}
+
+@media only screen and (max-width: 1000px) {
   .WRi {
     width: 100vw;
     margin-top: 20px;
@@ -1099,16 +1162,16 @@ video {
   }
   .Hbox {
     width: 100%;
-    height: 35vh;
+    height: 36vh;
     background: #E6E6E6;
     border-radius: 25px;
     margin-left: 0px;
     padding-left: 0px;
   }
   .Himg {
-    margin-top: 10vh;
+    margin-top: 9vh;
     margin-right: 100%;
-    width: 30vw;
+    width: 18vh;
     height: auto;
     border: none;
     margin-left: 2vw;
@@ -1117,11 +1180,11 @@ video {
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
+    font-size: 10px;
     line-height: 58px;
-    margin-top: -42vw;
+    margin-top: -23vh;
     margin-right: 100%;
-    margin-left: 34vw;
+    margin-left: 22vh;
   }
   .hTitleBox h3 {
     margin-top: 0px;
@@ -1131,12 +1194,61 @@ video {
     font-family: Gill Sans MT;
     font-style: normal;
     font-weight: bold;
-    font-size: 4vw;
-    line-height: 5vw;
+    font-size: 3vw;
+    line-height: 3vw;
     text-align: center;
-    margin-left: 34vw;
+    margin-left: 22vh;
     text-align: left;
     margin-top: 0px;
+  }
+  .Abox {
+    width: 90%;
+    height: 35vh;
+    background: #E6E6E6;
+    border-radius: 50px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin: 5%;
+  }
+  .Aimg {
+    margin-top: 10vh;
+    margin-right: 100%;
+    width: 30vw;
+    height: auto;
+    border: none;
+    margin-left: 2vw;
+  }
+  .aTitleBox {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 58px;
+    margin-top: -42vw;
+    margin-right: 100%;
+    margin-left: 34vw;
+  }
+  .aTitleBox h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .Areas {
+    height: 230vh !important;
+    position: relative;
+    width: 100vw;
+    background-color: #f6f6f6;
+  }
+  .cnt {
+    width: 85vw;
+    height: 70vh;
+    margin: auto;
+    background: rgba(232, 60, 76, 0.96);
+    top: -35vw;
+    position: relative;
+  }
+  #submit {
+    width: 25vw;
+    height: 5vh;
   }
 }
 

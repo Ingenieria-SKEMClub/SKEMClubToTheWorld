@@ -3,12 +3,15 @@
 let options = {
   accordion: null,
 };
-function ret() {
-  var elems = document.querySelectorAll(".dropdown-trigger");
-  var instances = M.Dropdown.init(elems);
-  var elems1 = document.querySelectorAll(".collapsible");
-  var instances1 = M.Collapsible.init(elems1, options);
+function ret() {   
+  var elems = document.querySelectorAll(".dropdown-trigger");   
+  var instances = M.Dropdown.init(elems);   
+  var elems1 = document.querySelectorAll(".collapsible");   
+  var instances1 = M.Collapsible.init(elems1, options);   
+  var elems2 = document.querySelectorAll('.select-in');   
+  var instances2 = M.FormSelect.init(elems2, options); 
 }
+
 //Change the backgound color by interval💢🐦
 function changeColor() {
   let y = 0;
@@ -114,7 +117,20 @@ class SkemCW extends React.Component {
       isUserUsingSystems: false
     })
   }
-  back(x) {
+  back() {
+    var width = document.documentElement.clientWidth;
+    console.log(width);
+    if  (width>1000){
+    document.getElementById("bgo").style.background = "#f6f6f6";
+    document.getElementById("EDA").style.display = "block";
+    document.getElementById("AP").style.display = "none";
+    document.getElementById("MP").style.display = "none";
+    document.getElementById("KP").style.display = "none";
+    document.getElementById("T").style.display = "none";
+    document.getElementById("t").style.display = "none";
+    document.getElementById("atra").style.display = "none";
+  }
+  else{
     document.getElementById("bgo").style.background = "#f6f6f6";
     document.getElementById("EDA").style.display = "block";
     document.getElementById("AP").style.display = "block";
@@ -123,9 +139,12 @@ class SkemCW extends React.Component {
     document.getElementById("T").style.display = "block";
     document.getElementById("t").style.display = "block";
     document.getElementById("atra").style.display = "none";
-    clearInterval(this.time);
   }
+}
   anext(){
+    var width = document.documentElement.clientWidth;
+    console.log(width);
+    if  (width>1000){
     document.getElementById("back").style.display = "block";
     document.getElementById("ar").style.display = "block";
     document.getElementById("li").style.display = "block";
@@ -133,8 +152,20 @@ class SkemCW extends React.Component {
     document.getElementById("ig").style.display = "none";
     document.getElementById("ds").style.display = "none";
     document.getElementById("next").style.display = "none";
+  } else{
+        document.getElementById("back").style.display = "none";
+    document.getElementById("ar").style.display = "block";
+    document.getElementById("li").style.display = "block";
+    document.getElementById("ci").style.display = "block";
+    document.getElementById("ig").style.display = "block";
+    document.getElementById("ds").style.display = "block";
+    document.getElementById("next").style.display = "none";
   }
+}
   aback(){
+    var width = document.documentElement.clientWidth;
+    console.log(width);
+    if  (width>1000){
     document.getElementById("next").style.display = "block";
     document.getElementById("ci").style.display = "block";
     document.getElementById("ig").style.display = "block";
@@ -143,6 +174,16 @@ class SkemCW extends React.Component {
     document.getElementById("li").style.display = "none";
     document.getElementById("back").style.display = "none";
   }
+  else{
+    document.getElementById("next").style.display = "none";
+    document.getElementById("ci").style.display = "block";
+    document.getElementById("ig").style.display = "block";
+    document.getElementById("ds").style.display = "block";
+    document.getElementById("ar").style.display = "block";
+    document.getElementById("li").style.display = "block";
+    document.getElementById("back").style.display = "none"; 
+  }
+}
   render() {
     return (
       <div>
@@ -156,7 +197,7 @@ class SkemCW extends React.Component {
           <button class="center-align white-text"
                 className="ab" onClick={()=> {this.goBackSystem()}}
                 style={{color: (this.state.systemPosition<5) ? "white" :  "black"}}
-                ><i class="material-icons medium  left" style={{color: (this.state.systemPosition<4) ? "white" :  "black"}}>
+                ><i class="material-icons medium  left" style={{color: (this.state.systemPosition<5) ? "white" :  "black"}}>
                   chevron_left
                 </i></button>
                 <button class="center-align white-text"
@@ -183,7 +224,7 @@ class SkemCW extends React.Component {
         <div className="contenedor" id="bgc">
           <nav class="transparent ">
             <div class="nav-wrapper">
-              <a href="#" class="brand-logo ">
+              <a href="#" class="brand-logo">
                 SKEMClub
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
@@ -192,9 +233,7 @@ class SkemCW extends React.Component {
                 </li>
                 <li>
                   <a class="dropdown-trigger " href="#" data-target="dropdown1">
-                    <i class="material-icons white-text right">
-                      keyboard_arrow_down
-                    </i>
+                    <i class="material-icons white-text right">keyboard_arrow_down</i>
                     Areas
                   </a>
 
@@ -236,7 +275,7 @@ class SkemCW extends React.Component {
             <p className="Slogan" id="text">
               Ejectuamos ideas geniales.
             </p>
-            <div class="left ">
+            <div class="left">
               <button  className="ibutton" id="bs">
                 ¡Descubre más!
               </button>
@@ -390,13 +429,14 @@ class SkemCW extends React.Component {
               </div>
               </div>
           </div>
+          
           <div className="OS" id="bgo">
           <div id="grid_who">
             <div id="atra" className="atras">
               <button
                 class="center-align white-text"
                 className="ab"
-                onClick={() => this.back(null)}
+                onClick={() => this.back()}
               >
                 <i class="material-icons medium white-text left">
                   chevron_left
@@ -440,7 +480,7 @@ class SkemCW extends React.Component {
             <div class="center-align">
               <p id="AreasT" >Áreas</p>
             </div>
-            <div class="row">
+            <div class="row" >
               <div class="col s12 l4">
                 <div class="center-align"> 
                   <div className="Abox" id="ci"> 
@@ -517,19 +557,24 @@ class SkemCW extends React.Component {
             </div>
             <div>
               <div class="left-lign">
-                <button className="back" id="back" onClick={() => this.aback()}><i class="medium material-icons">keyboard_arrow_left</i></button>
+                <button className="back" id="back" onClick={() => this.aback()}>
+                <i class="medium material-icons">keyboard_arrow_left</i></button>
               </div>
               </div>
               <div>
               <div class="right-align">
-                <button className="next" id="next" onClick={() => this.anext()}><i class="medium material-icons">keyboard_arrow_right</i></button>
+                <button className="next" id="next" onClick={() => this.anext()}>
+                  <div class="hide-on-med-and-down">
+                    <i class="medium material-icons">keyboard_arrow_right</i>
+                  </div>
+                </button>
               </div>
               </div>
             </div>
 
-            <div className="Areas">
+            <div className="">
             <div class="center-align">
-              <p id="AreasT" >Galeria</p>
+              <p className="AreasT">Galeria</p>
             </div>
         <div className="row1">
         <div className="column1">
@@ -560,11 +605,65 @@ class SkemCW extends React.Component {
   
 </div>
 
-        </div>  
+        </div> 
+
 
 
             
             </div>
+            
+            <div className="CNT">
+        <div class="center-align">
+              <p className="WRT" >¿Quieres contribuir a cambiar el mundo?</p>
+            </div>
+          <div className="cnt">
+          <div class="center-align">
+              <p className="WRT" >¡Contáctenos!</p>
+            </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="row cadr-panel">
+        <div class="input-field col s12 l6">
+          <input id="first_name" type="text"  class="validate" required></input>
+          <label for="first_name">Nombre</label>
+        </div>
+        <div class="input-field col s12 l6">
+          <input id="email" type="email"  class="validate" required></input>
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+      <div  class="input-field col s12 l6">
+    <select class="select-in" >
+      <option   disabled selected>Choose your category</option>
+      <option id="t" >Option 1</option>
+      <option id="t" value="2">Option 2</option>
+      <option  id="t" value="3">Option 3</option>
+    </select>
+    <label>Materialize Select</label>
+  </div>
+  </div>
+      <div class="row">
+      <div class="input-field col s12 ">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label>
+        </div>
+      </div>
+      <div class="row">
+      <div class="center-align">
+      <button  class="btn waves-effect waves-light  cyan accent-3" id="submit" type="submit" name="action">Enviar
+    <i class="material-icons right">send</i>
+  </button>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+        </div>
+
+        <div className="footer">
+
+        </div>
 
     </div>
        
