@@ -34,31 +34,46 @@
 }
 
 .input-field label {
-  color: blue !important;
+  color: #000  !important;
 }
 
 /* label focus color */
 .input-field input[type=text]:focus + label {
-  color: blue !important;
+  color: #000  !important;
 }
 
 /* label underline focus color */
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid blue !important;
-  -webkit-box-shadow: 0 1px 0 0 blue !important;
-          box-shadow: 0 1px 0 0 blue !important;
+  border-bottom: 1px solid #000 !important;
+  -webkit-box-shadow: 0 1px 0 0 #000  !important;
+          box-shadow: 0 1px 0 0 #000  !important;
 }
 
 /* valid color */
 .input-field input[type=text].valid {
-  border-bottom: 1px solid blue !important;
-  -webkit-box-shadow: 0 1px 0 0 blue !important;
-          box-shadow: 0 1px 0 0 blue !important;
+  border-bottom: 1px solid yellow  !important;
+  -webkit-box-shadow: 0 1px 0 0 yellow  !important;
+          box-shadow: 0 1px 0 0 yellow  !important;
+}
+
+.input-field input[type=email].valid {
+  border-bottom: 1px solid yellow  !important;
+  -webkit-box-shadow: 0 1px 0 0 yellow  !important;
+          box-shadow: 0 1px 0 0 yellow  !important;
 }
 
 /* icon prefix focus color */
 .input-field .prefix.active {
-  color: blue !important;
+  color: #000  !important;
+}
+
+input-field:-internal-autofill-selected {
+  -webkit-appearance: menulist-button;
+     -moz-appearance: menulist-button;
+          appearance: menulist-button;
+  background-color: #e8f0fe !important;
+  background-image: none !important;
+  color: -internal-light-dark(black, red) !important;
 }
 
 .Simg {
@@ -156,6 +171,14 @@ body {
 
 .hide {
   display: none;
+}
+
+/* Change the white to any color */
+input [type=text]:-webkit-autofill,
+input [type=text]:-webkit-autofill:hover,
+input [type=text]:-webkit-autofill:focus,
+input [type=text]:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .contenedor {
@@ -641,7 +664,7 @@ video {
 }
 
 #systems #content {
-  padding: 50px;
+  padding: 0px;
 }
 
 .Areas {
@@ -861,6 +884,13 @@ video {
   width: 100%;
 }
 
+.Gal {
+  position: relative;
+  width: 100vw;
+  height: 110vh;
+  background-color: #f6f6f6;
+}
+
 .CNT {
   position: relative;
   width: 100vw;
@@ -868,16 +898,20 @@ video {
 }
 
 .cnt {
-  width: 75vw;
+  width: 80vw;
   height: 60vh;
-  margin: auto;
   background: rgba(232, 60, 76, 0.96);
-  top: 14Vh;
+  margin: auto;
   position: relative;
 }
 
-.bcnt {
-  margin-left: 55vh;
+.cntT {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px !important;
+  line-height: 43px;
+  margin-top: -4vh;
 }
 
 #submit {
@@ -1182,7 +1216,7 @@ video {
     font-weight: normal;
     font-size: 10px;
     line-height: 58px;
-    margin-top: -23vh;
+    margin-top: -20vh;
     margin-right: 100%;
     margin-left: 22vh;
   }
@@ -1203,7 +1237,7 @@ video {
   }
   .Abox {
     width: 90%;
-    height: 35vh;
+    height: 36vh;
     background: #E6E6E6;
     border-radius: 50px;
     margin-left: 0px;
@@ -1211,32 +1245,74 @@ video {
     margin: 5%;
   }
   .Aimg {
-    margin-top: 10vh;
+    margin-top: 9vh;
     margin-right: 100%;
-    width: 30vw;
+    width: 18vh;
     height: auto;
     border: none;
-    margin-left: 2vw;
+    margin-left: 3vw;
   }
   .aTitleBox {
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
-    line-height: 58px;
-    margin-top: -42vw;
+    font-size: 10px;
+    line-height: 44px;
+    margin-top: -22vh;
     margin-right: 100%;
-    margin-left: 34vw;
+    margin-left: 23vh;
   }
   .aTitleBox h3 {
-    margin-top: 0px;
     margin-bottom: 0px;
+    font-size: 28px;
+  }
+  .aTextBox {
+    font-family: Gill Sans MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3vw;
+    line-height: 3vw;
+    text-align: center;
+    margin-left: 23vh;
+    text-align: left;
+    margin-top: 0px;
   }
   .Areas {
     height: 230vh !important;
     position: relative;
     width: 100vw;
     background-color: #f6f6f6;
+  }
+  #ci {
+    background-color: #386FCB;
+    color: white;
+    -webkit-box-shadow: 10px 5px 0px  2px #5486d8;
+            box-shadow: 10px 5px 0px  2px #5486d8;
+  }
+  #ig {
+    background-color: #65C8D0;
+    -webkit-box-shadow: 10px 5px 0px  2px #75e6ee;
+            box-shadow: 10px 5px 0px  2px #75e6ee;
+  }
+  #ds {
+    background-color: #FFDC72;
+    -webkit-box-shadow: 10px 5px 0px  2px #E9C350;
+            box-shadow: 10px 5px 0px  2px #E9C350;
+  }
+  #ar {
+    background-color: #E63C4C;
+    color: white;
+    -webkit-box-shadow: 10px 5px 0px  2px #E13141;
+            box-shadow: 10px 5px 0px  2px #E13141;
+  }
+  #li {
+    background-color: #E63C4C;
+    color: white;
+    -webkit-box-shadow: 10px 5px 0px  2px #E13141;
+            box-shadow: 10px 5px 0px  2px #E13141;
+  }
+  #systems {
+    height: 100%;
   }
   .cnt {
     width: 85vw;
@@ -1245,6 +1321,9 @@ video {
     background: rgba(232, 60, 76, 0.96);
     top: -35vw;
     position: relative;
+  }
+  .Abutton {
+    display: none;
   }
   #submit {
     width: 25vw;

@@ -56,6 +56,72 @@ function changeColor() {
   ];
   return;
 }
+//Change the backgound color by interval💢🐦
+function changeStory() {
+  let y = 0;
+  setInterval(function () {
+    y += 1;
+    if (y === img1.length) {
+      y = 0;
+    }
+    //Code to be executed after 10 second💢🐦
+    document.getElementById("himg1").innerHTML = img1[y];
+    document.getElementById("himg2").innerHTML = img2[y];
+    document.getElementById("himg3").innerHTML = img3[y];
+    document.getElementById("hn1").innerHTML = n1[y];
+    document.getElementById("hn2").innerHTML = n2[y];
+    document.getElementById("hn3").innerHTML = n3[y];
+    document.getElementById("ht1").innerHTML = text1[y];
+    document.getElementById("ht2").innerHTML = text2[y];
+    document.getElementById("ht3").innerHTML = text3[y];
+  }, 10000);
+  let img1 = [
+    "<img class='Himg' src='/IMG/advisicon.png' > </img>",
+    "<img   class='Himg' src='/IMG/Microsoft.png' ></img>",
+    "<img   class='Himg' src='/IMG/emerson.png' ></img>",
+  ];
+  let img2 = [
+    "<img class='Himg' src='/IMG/Microsoft.png' > </img>",
+    "<img   class='Himg' src='/IMG/emerson.png' ></img>",
+    "<img   class='Himg' src='/IMG/advisicon.png' ></img>",
+  ];
+  let img3 = [
+    "<img class='Himg' src='/IMG/emerson.png' > </img>",
+    "<img   class='Himg' src='/IMG/advisicon.png' ></img>",
+    "<img class='Himg' src='/IMG/Microsoft.png' > </img>",
+  ];
+  let n1 = [
+    "<h3 >Advisicon</h3>",
+    "<h3 >Microsoft</h3>",
+    "<h3 >Emerson</h3>",
+  ];
+  let n2 = [
+    "<h3 >Microsoft</h3>",
+    "<h3 >Emerson</h3>",
+    "<h3 >Advisicon</h3>",
+  ];
+  let n3 = [
+    "<h3 >Emerson</h3>",
+    "<h3 >Advisicon</h3>",
+    "<h3 >Microsoft</h3>",
+  ];
+  let text1 = [
+    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
+    "<h3 class='hTextBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium</h3>",
+    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
+  ];
+  let text2 = [
+    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
+    "<h3 class='hTextBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium</h3>",
+    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
+  ];
+  let text3 = [
+    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
+    "<h3 class='hTextBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium</h3>",
+    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
+  ];
+  return;
+}
 class SkemCW extends React.Component {
   constructor(props) {
     super(props);
@@ -102,6 +168,7 @@ class SkemCW extends React.Component {
   componentDidMount() {
     let indexOfColor = 0;
     changeColor(indexOfColor);
+    changeStory(indexOfColor);
     ret();
     this.aback();
   }
@@ -239,34 +306,34 @@ class SkemCW extends React.Component {
 
                   <ul id="dropdown1" class="dropdown-content transparent">
                     <li class="transparent xd">
-                      <a class="white-text" href="#!">
+                      <a class="white-text" href="#wr">
                         <i class="material-icons white-text">folder</i>
                         Portafolio
                       </a>
                     </li>
                     <li class="transparent">
-                      <a class="white-text" href="#">
+                      <a class="white-text" href="#areas">
                         <i class="material-icons white-text">view_module</i>Área
                       </a>
                     </li>
                     <li class="transparent">
-                      <a class="white-text" href="#">
+                      <a class="white-text" href="#Historias">
                         <i class="material-icons white-text">import_contacts</i>
                         Historias
                       </a>
                     </li>
                     <li class="transparent">
-                      <a class="white-text" href="#Sistemas">
+                      <a class="white-text" href="#bgs">
                         <i class="material-icons white-text">cloud</i>Sistemas
                       </a>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href=".html">Galeria</a>
+                  <a href="#galeria">Galeria</a>
                 </li>
                 <li>
-                  <a href="sass.html">Contacto</a>
+                  <a href="#cnt">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -384,11 +451,13 @@ class SkemCW extends React.Component {
               <div class="col s12 l4">
                   <div className="Hbox"> 
                     <div class="center-align">
-                    <img  className="Himg" src="/IMG/emerson.png"></img>
-                      <div className="hTitleBox">
-                        <h3>Emerson</h3>
+                    <div id="himg1">
+                    <img  className="Himg"  src="/IMG/emerson.png"></img>
+                    </div>
+                      <div className="hTitleBox" >
+                        <h3 id="hn1" >Emerson</h3>
                       </div>
-                      <h3 className="hTextBox" >
+                      <h3 className="hTextBox" id="ht1" >
                       Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                       herramientas y soluciones reales en tiempos record.</h3>
                     </div>
@@ -397,12 +466,14 @@ class SkemCW extends React.Component {
               <div class="col s12 l4">
                 <div class="center-align">
                   <div className="Hbox" >
-                  <div class="center-align">
+                  <div class="center-align" >
+                  <div id="himg2">
                     <img className="Himg " src="/IMG/advisicon.png"></img>
-                    <div className="hTitleBox">
-                        <h3>Advisicon</h3>
                     </div>
-                    <h3 className="hTextBox" >
+                    <div className="hTitleBox" >
+                        <h3 id="hn2">Advisicon</h3>
+                    </div>
+                    <h3 className="hTextBox" id="ht2">
                     Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                     herramientas y soluciones reales en tiempos record.</h3>
                   </div>
@@ -412,14 +483,15 @@ class SkemCW extends React.Component {
               <div class="col s12 l4">
                 <div class="center-align">
                   <div className="Hbox" >
-                  <div class="center-align" >
-                  <div >
+                  <div class="center-align"  >
+                 <div id="himg3">
                     <img className="Himg" src="/IMG/Microsoft.png"></img>
                     </div>
-                      <div className="hTitleBox" >
-                        <h3 >Microsoft</h3>
+                      <div className="hTitleBox">
+                        <h3 id="hn3" >Microsoft</h3>
                       </div>
-                        <h3 className="hTextBox" >
+                      
+                        <h3 className="hTextBox" id="ht3" >
                         Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                         herramientas y soluciones reales en tiempos record.</h3>
                     </div>
@@ -476,14 +548,14 @@ class SkemCW extends React.Component {
            </div>
           </div> 
 
-          <div className="Areas">
+          <div className="Areas" id="areas">
             <div class="center-align">
               <p id="AreasT" >Áreas</p>
             </div>
             <div class="row" >
               <div class="col s12 l4">
                 <div class="center-align"> 
-                  <div className="Abox" id="ci"> 
+                  <buttom className="Abox" id="ci" onClick={() => this.OS(5)}> 
                     <div class="center-align">
                     <img className="Aimg" src="/IMG/Direccion de Ciencia.png"></img>
                       <div className="aTitleBox">
@@ -492,12 +564,12 @@ class SkemCW extends React.Component {
                       <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
                       <button className="Abutton" onClick={() => this.OS(5)} >¡Descubre más!</button>
                     </div>
-                  </div>
+                  </buttom>
                 </div>
               </div>
               <div class="col s12 l4">
                 <div class="center-align">
-                  <div className="Abox"  id="ig">
+                  <buttom className="Abox"  id="ig" onClick={() => this.OS(6)}>
                   <div class="center-align">
                     <img className="Aimg" src="/IMG/Direccion de Ingenieria.png"></img>
                     <div className="aTitleBox">
@@ -506,12 +578,12 @@ class SkemCW extends React.Component {
                     <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
                     <button className="Abutton" onClick={() => this.OS(6)} >¡Descubre más!</button>
                   </div>
-                  </div>
+                  </buttom>
                 </div>
               </div>
               <div class="col s12 l4">
                 <div class="center-align">
-                  <div className="Abox" id="ds">
+                <buttom className="Abox" id="ds" onClick={() => this.OS(7)} >
                   <div class="center-align" >
                     <img className="Aimg" src="/IMG/Direccion de Desarrollo Sostenible.png"></img>
                       <div className="aTitleBox" >
@@ -520,7 +592,7 @@ class SkemCW extends React.Component {
                         <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
                         <button className="Abutton" onClick={() => this.OS(7)} >¡Descubre más!</button>
                     </div>
-                  </div>
+                  </buttom>
                 </div>
               </div>
               <div class="col s12  l2">
@@ -528,7 +600,7 @@ class SkemCW extends React.Component {
               </div>
               <div class="col s12  l4">
                 <div class="center-align">
-                  <div className="Abox" id="ar">
+                  <buttom className="Abox" id="ar" onClick={() => this.OS(8)}>
                   <div class="center-align" >
                     <img className="Aimg" src="/IMG/Direccion de Arte.png"></img>
                     <div className="aTitleBox">
@@ -537,12 +609,12 @@ class SkemCW extends React.Component {
                     <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
                     <button className="Abutton" onClick={() => this.OS(8)}>¡Descubre más!</button>
                   </div>
-                  </div>
+                  </buttom>
                 </div>
               </div>
               <div class="col s12  l4 ">
                 <div class="center-align">
-                  <div className="Abox" id="li">
+                  <buttom className="Abox" id="li" onClick={() => this.OS(9)}>
                   <div class="center-align" >
                     <img className="Aimg" src="/IMG/Direccion de Liderazgo.png"></img>
                     <div className="aTitleBox" >
@@ -551,7 +623,7 @@ class SkemCW extends React.Component {
                       <h3 className="aTextBox" >Andre perdon por ser tan rico :3</h3>
                       <button className="Abutton" onClick={() => this.OS(9)}>¡Descubre más!</button>
                   </div>
-                  </div>
+                  </buttom>
                 </div>
               </div>
             </div>
@@ -572,9 +644,9 @@ class SkemCW extends React.Component {
               </div>
             </div>
 
-            <div className="">
+            <div className="Gal" id="galeria">
             <div class="center-align">
-              <p className="AreasT">Galeria</p>
+              <p id="AreasT">Galeria</p>
             </div>
         <div className="row1">
         <div className="column1">
@@ -612,9 +684,9 @@ class SkemCW extends React.Component {
             
             </div>
             
-            <div className="CNT">
+            <div className="CNT" id="cnt">
         <div class="center-align">
-              <p className="WRT" >¿Quieres contribuir a cambiar el mundo?</p>
+              <p class="WRT" >¿Quieres contribuir a cambiar el mundo?</p>
             </div>
           <div className="cnt">
           <div class="center-align">
@@ -623,30 +695,29 @@ class SkemCW extends React.Component {
   <div class="row">
     <div class="col s12">
       <div class="row cadr-panel">
-        <div class="input-field col s12 l6">
-          <input id="first_name" type="text"  class="validate" required></input>
-          <label for="first_name">Nombre</label>
+        <div class="input-field col s12 l6 ">
+          <input id="first_name" placeholder="" type="text"  class="validate" required></input>
+          <label for="first_name" className="cntT">Nombre</label>
         </div>
-        <div class="input-field col s12 l6">
-          <input id="email" type="email"  class="validate" required></input>
-          <label for="email">Email</label>
+        <div class="input-field col s12 l6 ">
+          <input id="email" placeholder="" type="email"  class="validate" required></input>
+          <label for="email" className="cntT">Email</label>
         </div>
       </div>
       <div class="row">
-      <div  class="input-field col s12 l6">
-    <select class="select-in" >
+      <div  class="input-field col s12 l6  validate">
+    <select class="select-in validate" >
       <option   disabled selected>Choose your category</option>
-      <option id="t" >Option 1</option>
-      <option id="t" value="2">Option 2</option>
-      <option  id="t" value="3">Option 3</option>
+      <option class="validate" >Option 1</option>
+      <option class="validate" >Option 2</option>
+      <option class="validate" >Option 3</option>
     </select>
-    <label>Materialize Select</label>
   </div>
   </div>
       <div class="row">
       <div class="input-field col s12 ">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Textarea</label>
+          <input id="textarea1" placeholder="" type="text" class="materialize-textarea validate"></input>
+          <label for="textarea1" className="cntT">Textarea</label>
         </div>
       </div>
       <div class="row">
