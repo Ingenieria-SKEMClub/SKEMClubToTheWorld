@@ -1195,7 +1195,7 @@ video {
     margin-left: 25vw;
   }
   .Hbox {
-    width: 100%;
+    width: 95vw;
     height: 36vh;
     background: #E6E6E6;
     border-radius: 25px;
@@ -1204,7 +1204,7 @@ video {
   }
   .Himg {
     margin-top: 9vh;
-    margin-right: 100%;
+    margin-right: 45vw;
     width: 18vh;
     height: auto;
     border: none;
@@ -1217,7 +1217,7 @@ video {
     font-size: 10px;
     line-height: 58px;
     margin-top: -20vh;
-    margin-right: 100%;
+    margin-right: 45vw;
     margin-left: 22vh;
   }
   .hTitleBox h3 {
@@ -1228,8 +1228,8 @@ video {
     font-family: Gill Sans MT;
     font-style: normal;
     font-weight: bold;
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: 4vw;
+    line-height: 4vw;
     text-align: center;
     margin-left: 22vh;
     text-align: left;
@@ -1246,7 +1246,7 @@ video {
   }
   .Aimg {
     margin-top: 9vh;
-    margin-right: 100%;
+    margin-right: 35vw;
     width: 18vh;
     height: auto;
     border: none;
@@ -1259,7 +1259,7 @@ video {
     font-size: 10px;
     line-height: 44px;
     margin-top: -22vh;
-    margin-right: 100%;
+    margin-right: 45vw;
     margin-left: 23vh;
   }
   .aTitleBox h3 {

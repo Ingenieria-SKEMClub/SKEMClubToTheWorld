@@ -457,9 +457,11 @@ class SkemCW extends React.Component {
                       <div className="hTitleBox" >
                         <h3 id="hn1" >Emerson</h3>
                       </div>
-                      <h3 className="hTextBox" id="ht1" >
+                      <div id="ht1">
+                      <h3 className="hTextBox"  >
                       Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                       herramientas y soluciones reales en tiempos record.</h3>
+                      </div>
                     </div>
                   </div>
               </div>
@@ -473,9 +475,11 @@ class SkemCW extends React.Component {
                     <div className="hTitleBox" >
                         <h3 id="hn2">Advisicon</h3>
                     </div>
-                    <h3 className="hTextBox" id="ht2">
+                    <div id="ht2">
+                    <h3 className="hTextBox" >
                     Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                     herramientas y soluciones reales en tiempos record.</h3>
+                    </div>
                   </div>
                   </div>
                 </div>
@@ -490,10 +494,11 @@ class SkemCW extends React.Component {
                       <div className="hTitleBox">
                         <h3 id="hn3" >Microsoft</h3>
                       </div>
-                      
-                        <h3 className="hTextBox" id="ht3" >
+                      <div id="ht3">
+                        <h3 className="hTextBox"  >
                         Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
                         herramientas y soluciones reales en tiempos record.</h3>
+                        </div>
                     </div>
                   </div>
                 </div>
