@@ -126,6 +126,10 @@ class SkemCW extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: '',
+      email: '',
+      text: '',
+      select: '',
       colors: ["black", "white", "green", "yellow", "red"],
       systemColors: [
         "linear-gradient(75.51deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
@@ -164,7 +168,13 @@ class SkemCW extends React.Component {
       systemPosition: 0,
       SystemName: "",
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChange1 = this.handleChange1.bind(this);
+    this.handleChange2 = this.handleChange2.bind(this);
+    this.handleChange3 = this.handleChange3.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+  
   componentDidMount() {
     let indexOfColor = 0;
     changeColor(indexOfColor);
@@ -250,6 +260,26 @@ class SkemCW extends React.Component {
     document.getElementById("li").style.display = "block";
     document.getElementById("back").style.display = "none"; 
   }
+}
+handleChange(event) {
+  this.setState({name: event.target.value});
+}
+handleChange1(x) {
+  this.setState({email: x.target.value});
+}
+handleChange2(x) {
+  this.setState({select: x.target.value});
+}
+handleChange3(x) {
+  this.setState({text: x.target.value});
+}
+
+handleSubmit(event) {
+  alert('A name was submitted: ' + this.state.name);
+  alert('An Email was submitted: ' + this.state.email);
+  alert('A Select was submitted: ' + this.state.select);
+  alert('A Text was submitted: ' + this.state.text);
+  event.preventDefault();
 }
   render() {
     return (
@@ -697,31 +727,31 @@ class SkemCW extends React.Component {
           <div class="center-align">
               <p className="WRT" >¡Contáctenos!</p>
             </div>
-  <div class="row">
+  <form class="row" onSubmit={this.handleSubmit}>
     <div class="col s12">
       <div class="row cadr-panel">
         <div class="input-field col s12 l6 ">
-          <input id="first_name" placeholder="" type="text"  class="validate" required></input>
+          <input id="first_name" placeholder="" type="text"  class="validate" value={this.state.name} onChange={this.handleChange} required></input>
           <label for="first_name" className="cntT">Nombre</label>
         </div>
         <div class="input-field col s12 l6 ">
-          <input id="email" placeholder="" type="email"  class="validate" required></input>
+          <input id="email" placeholder="" type="email"  class="validate" value={this.state.email} onChange={this.handleChange1} required></input>
           <label for="email" className="cntT">Email</label>
         </div>
       </div>
       <div class="row">
       <div  class="input-field col s12 l6  validate">
-    <select class="select-in validate" >
-      <option   disabled selected>Choose your category</option>
-      <option class="validate" >Option 1</option>
-      <option class="validate" >Option 2</option>
-      <option class="validate" >Option 3</option>
+    <select class="select-in validate" value={this.state.select} onChange={this.handleChange2}>
+      <option disabled selected>Choose your category</option>
+      <option class="validate" value="Option 1" >Option 1</option>
+      <option class="validate" value="Option 2" >Option 2</option>
+      <option class="validate" value="Option 3" >Option 3</option>
     </select>
   </div>
   </div>
       <div class="row">
       <div class="input-field col s12 ">
-          <input id="textarea1" placeholder="" type="text" class="materialize-textarea validate"></input>
+          <input id="textarea1" placeholder="" type="text" class="materialize-textarea validate" value={this.state.text} onChange={this.handleChange3}></input>
           <label for="textarea1" className="cntT">Textarea</label>
         </div>
       </div>
@@ -733,7 +763,7 @@ class SkemCW extends React.Component {
   </div>
       </div>
     </div>
-  </div>
+  </form>
   </div>
         </div>
 
