@@ -10,6 +10,8 @@ function ret() {
   var instances1 = M.Collapsible.init(elems1, options);   
   var elems2 = document.querySelectorAll('.select-in');   
   var instances2 = M.FormSelect.init(elems2, options); 
+  var elems3 = document.querySelectorAll(".sidenav");
+  var instances3 = M.Sidenav.init(elems3, options);
 }
 
 //Change the backgound color by interval💢🐦
@@ -57,71 +59,6 @@ function changeColor() {
   return;
 }
 //Change the backgound color by interval💢🐦
-function changeStory() {
-  let y = 0;
-  setInterval(function () {
-    y += 1;
-    if (y === img1.length) {
-      y = 0;
-    }
-    //Code to be executed after 10 second💢🐦
-    document.getElementById("himg1").innerHTML = img1[y];
-    document.getElementById("himg2").innerHTML = img2[y];
-    document.getElementById("himg3").innerHTML = img3[y];
-    document.getElementById("hn1").innerHTML = n1[y];
-    document.getElementById("hn2").innerHTML = n2[y];
-    document.getElementById("hn3").innerHTML = n3[y];
-    document.getElementById("ht1").innerHTML = text1[y];
-    document.getElementById("ht2").innerHTML = text2[y];
-    document.getElementById("ht3").innerHTML = text3[y];
-  }, 10000);
-  let img1 = [
-    "<img class='Himg' src='/IMG/advisicon.png' > </img>",
-    "<img   class='Himg' src='/IMG/Microsoft.png' ></img>",
-    "<img   class='Himg' src='/IMG/emerson.png' ></img>",
-  ];
-  let img2 = [
-    "<img class='Himg' src='/IMG/Microsoft.png' > </img>",
-    "<img   class='Himg' src='/IMG/emerson.png' ></img>",
-    "<img   class='Himg' src='/IMG/advisicon.png' ></img>",
-  ];
-  let img3 = [
-    "<img class='Himg' src='/IMG/emerson.png' > </img>",
-    "<img   class='Himg' src='/IMG/advisicon.png' ></img>",
-    "<img class='Himg' src='/IMG/Microsoft.png' > </img>",
-  ];
-  let n1 = [
-    "<h3 >Advisicon</h3>",
-    "<h3 >Microsoft</h3>",
-    "<h3 >Emerson</h3>",
-  ];
-  let n2 = [
-    "<h3 >Microsoft</h3>",
-    "<h3 >Emerson</h3>",
-    "<h3 >Advisicon</h3>",
-  ];
-  let n3 = [
-    "<h3 >Emerson</h3>",
-    "<h3 >Advisicon</h3>",
-    "<h3 >Microsoft</h3>",
-  ];
-  let text1 = [
-    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
-    "<h3 class='hTextBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium</h3>",
-    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
-  ];
-  let text2 = [
-    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
-    "<h3 class='hTextBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium</h3>",
-    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
-  ];
-  let text3 = [
-    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
-    "<h3 class='hTextBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium</h3>",
-    "<h3 class='hTextBox'>Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear herramientas y soluciones reales en tiempos record.</h3>",
-  ];
-  return;
-}
 class SkemCW extends React.Component {
   constructor(props) {
     super(props);
@@ -164,9 +101,10 @@ class SkemCW extends React.Component {
         "/IMG/Direccion de Arte.png",
         "/IMG/Direccion de Liderazgo.png"
       ],
+      hcarrousel: 1,
       isUserUsingSystems: false,
       systemPosition: 0,
-      SystemName: "",
+      SystemName: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleChange1 = this.handleChange1.bind(this);
@@ -177,11 +115,13 @@ class SkemCW extends React.Component {
   
   componentDidMount() {
     let indexOfColor = 0;
+    let initialNum = 1;
     changeColor(indexOfColor);
-    changeStory(indexOfColor);
     ret();
     this.aback();
+    this.hback(0);
   }
+
   //Change the color of the background by clicking the button 💢🐦
   OS(x) {
     this.setState({
@@ -261,6 +201,140 @@ class SkemCW extends React.Component {
     document.getElementById("back").style.display = "none"; 
   }
 }
+
+
+
+
+  hback(res){
+    let stateNum = this.state.hcarrousel;
+  let Num = stateNum+res;
+  if (Num==1){
+    document.getElementById("himg1").style.display = "block";
+    document.getElementById("himg2").style.display = "block";
+    document.getElementById("himg3").style.display = "block";
+    document.getElementById("ht1").style.display = "block";
+    document.getElementById("ht2").style.display = "block";
+    document.getElementById("ht3").style.display = "block";
+    document.getElementById("hn1").style.display = "block";
+    document.getElementById("hn2").style.display = "block";
+    document.getElementById("hn3").style.display = "block";
+    document.getElementById("h1").style.display = "block";
+    document.getElementById("h2").style.display = "block";
+    document.getElementById("h3").style.display = "block";
+    document.getElementById("himg4").style.display = "none";
+    document.getElementById("himg5").style.display = "none";
+    document.getElementById("himg6").style.display = "none";
+    document.getElementById("ht4").style.display = "none";
+    document.getElementById("ht5").style.display = "none";
+    document.getElementById("ht6").style.display = "none";
+    document.getElementById("hn4").style.display = "none";
+    document.getElementById("hn5").style.display = "none";
+    document.getElementById("hn6").style.display = "none";
+    document.getElementById("h4").style.display = "none";
+    document.getElementById("h5").style.display = "none";
+    document.getElementById("h6").style.display = "none";
+    document.getElementById("himg7").style.display = "none";
+    document.getElementById("himg8").style.display = "none";
+    document.getElementById("himg9").style.display = "none";
+    document.getElementById("ht7").style.display = "none";
+    document.getElementById("ht8").style.display = "none";
+    document.getElementById("ht9").style.display = "none";
+    document.getElementById("hn7").style.display = "none";
+    document.getElementById("hn8").style.display = "none";
+    document.getElementById("hn9").style.display = "none";
+    document.getElementById("h7").style.display = "none";
+    document.getElementById("h8").style.display = "none";
+    document.getElementById("h9").style.display = "none";
+    document.getElementById("hnext").style.display = "block";
+    document.getElementById("hback").style.display = "none";
+  }
+  else if (Num==4){
+    document.getElementById("himg1").style.display = "none";
+    document.getElementById("himg2").style.display = "none";
+    document.getElementById("himg3").style.display = "none";
+    document.getElementById("ht1").style.display = "none";
+    document.getElementById("ht2").style.display = "none";
+    document.getElementById("ht3").style.display = "none";
+    document.getElementById("hn1").style.display = "none";
+    document.getElementById("hn2").style.display = "none";
+    document.getElementById("hn3").style.display = "none";
+    document.getElementById("h1").style.display = "none";
+    document.getElementById("h2").style.display = "none";
+    document.getElementById("h3").style.display = "none";
+    document.getElementById("himg4").style.display = "block";
+    document.getElementById("himg5").style.display = "block";
+    document.getElementById("himg6").style.display = "block";
+    document.getElementById("ht4").style.display = "block";
+    document.getElementById("ht5").style.display = "block";
+    document.getElementById("ht6").style.display = "block";
+    document.getElementById("hn4").style.display = "block";
+    document.getElementById("hn5").style.display = "block";
+    document.getElementById("hn6").style.display = "block";
+    document.getElementById("h4").style.display = "block";
+    document.getElementById("h5").style.display = "block";
+    document.getElementById("h6").style.display = "block";
+    document.getElementById("himg7").style.display = "none";
+    document.getElementById("himg8").style.display = "none";
+    document.getElementById("himg9").style.display = "none";
+    document.getElementById("ht7").style.display = "none";
+    document.getElementById("ht8").style.display = "none";
+    document.getElementById("ht9").style.display = "none";
+    document.getElementById("hn7").style.display = "none";
+    document.getElementById("hn8").style.display = "none";
+    document.getElementById("hn9").style.display = "none";
+    document.getElementById("h7").style.display = "none";
+    document.getElementById("h8").style.display = "none";
+    document.getElementById("h9").style.display = "none";
+    document.getElementById("hnext").style.display = "block";
+    document.getElementById("hback").style.display = "block";
+}
+else if(Num==7){
+  document.getElementById("himg1").style.display = "none";
+  document.getElementById("himg2").style.display = "none";
+  document.getElementById("himg3").style.display = "none";
+  document.getElementById("ht1").style.display = "none";
+  document.getElementById("ht2").style.display = "none";
+  document.getElementById("ht3").style.display = "none";
+  document.getElementById("hn1").style.display = "none";
+  document.getElementById("hn2").style.display = "none";
+  document.getElementById("hn3").style.display = "none";
+  document.getElementById("h1").style.display = "none";
+  document.getElementById("h2").style.display = "none";
+  document.getElementById("h3").style.display = "none";
+  document.getElementById("himg4").style.display = "none";
+  document.getElementById("himg5").style.display = "none";
+  document.getElementById("himg6").style.display = "none";
+  document.getElementById("ht4").style.display = "none";
+  document.getElementById("ht5").style.display = "none";
+  document.getElementById("ht6").style.display = "none";
+  document.getElementById("hn4").style.display = "none";
+  document.getElementById("hn5").style.display = "none";
+  document.getElementById("hn6").style.display = "none";
+  document.getElementById("h4").style.display = "none";
+  document.getElementById("h5").style.display = "none";
+  document.getElementById("h6").style.display = "none";
+  document.getElementById("himg7").style.display = "block";
+  document.getElementById("himg8").style.display = "block";
+  document.getElementById("himg9").style.display = "block";
+  document.getElementById("ht7").style.display = "block";
+  document.getElementById("ht8").style.display = "block";
+  document.getElementById("ht9").style.display = "block";
+  document.getElementById("hn7").style.display = "block";
+  document.getElementById("hn8").style.display = "block";
+  document.getElementById("hn9").style.display = "block";
+  document.getElementById("h7").style.display = "block";
+  document.getElementById("h8").style.display = "block";
+  document.getElementById("h9").style.display = "block";
+  document.getElementById("hnext").style.display = "none";
+  document.getElementById("hback").style.display = "block";
+}
+  console.log(Num);
+  this.setState({
+    hcarrousel: Num
+  })
+}
+
+
 handleChange(event) {
   this.setState({name: event.target.value});
 }
@@ -291,24 +365,24 @@ handleSubmit(event) {
             color: (this.state.systemPosition===3) ? "white" :  "black"
           }}
           >
-          <button class="center-align white-text"
+          <a class="center-align white-text"
                 className="ab" onClick={()=> {this.goBackSystem()}}
                 style={{color: (this.state.systemPosition<5) ? "white" :  "black"}}
                 ><i class="material-icons medium  left" style={{color: (this.state.systemPosition<5) ? "white" :  "black"}}>
                   chevron_left
-                </i></button>
-                <button class="center-align white-text"
+                </i></a>
+                <a class="center-align white-text"
                 className="kpbtn" onClick={()=> {this.OS(4)}}
                 style={{color: "white"}}
                 ><i class="material-icons medium  left" style={{display: (this.state.systemPosition==2) ? "block" :  "none"}}>
                   chevron_right
-                </i></button>
-                <button class="center-align white-text"
+                </i></a>
+                <a class="center-align white-text"
                 className="kpbtnb" onClick={()=> {this.OS(2)}}
                 style={{color: "white"}}
                 ><i class="material-icons medium  left" style={{display: (this.state.systemPosition==4) ? "block" :  "none"}}>
                   chevron_left
-                </i></button>
+                </i></a>
           <div id='image'>
           <img class="Simg" src={this.state.systemImages[this.state.systemPosition]}></img>
           </div>
@@ -321,29 +395,26 @@ handleSubmit(event) {
         <div className="contenedor" id="bgc">
           <nav class="transparent ">
             <div class="nav-wrapper">
+
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              
               <a href="#" class="brand-logo">
                 SKEMClub
               </a>
               <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
                 <li>
-                  <a href="index.html">Inicio</a>
+                  <a href="#bgc">Inicio</a>
                 </li>
                 <li>
-                  <a class="dropdown-trigger " href="#" data-target="dropdown1">
+                  <a class="dropdown-trigger " data-target="dropdown1">
                     <i class="material-icons white-text right">keyboard_arrow_down</i>
                     Areas
                   </a>
-
                   <ul id="dropdown1" class="dropdown-content transparent">
                     <li class="transparent xd">
-                      <a class="white-text" href="#wr">
+                      <a class="white-text" href="#portafolio">
                         <i class="material-icons white-text">folder</i>
                         Portafolio
-                      </a>
-                    </li>
-                    <li class="transparent">
-                      <a class="white-text" href="#areas">
-                        <i class="material-icons white-text">view_module</i>Área
                       </a>
                     </li>
                     <li class="transparent">
@@ -353,8 +424,13 @@ handleSubmit(event) {
                       </a>
                     </li>
                     <li class="transparent">
-                      <a class="white-text" href="#bgs">
+                      <a class="white-text" href="#bgo">
                         <i class="material-icons white-text">cloud</i>Sistemas
+                      </a>
+                    </li>
+                    <li class="transparent">
+                      <a class="white-text" href="#areas">
+                        <i class="material-icons white-text">view_module</i>Áreas
                       </a>
                     </li>
                   </ul>
@@ -368,6 +444,27 @@ handleSubmit(event) {
               </ul>
             </div>
           </nav>
+
+          <ul id="slide-out" class="sidenav">
+            <li>
+              <div class="user-view">
+                <div class="background blue lighten-1">
+                </div>
+                <a href="#"><img class="circle" src="/IMG/WHITE.png"></img></a>
+                
+              </div>
+            </li>
+            <li><a href="#bgc">Inicio</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#Historias">Historias</a></li>
+            <li><a href="#bgo">Sistemas</a></li>
+            <li><a href="#areas">Áreas</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#cnt">Contacto</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Subheader</a></li>
+          </ul>
+  
           <div class="container">
             <p className="Slogan" id="text">
               Ejectuamos ideas geniales.
@@ -393,7 +490,7 @@ handleSubmit(event) {
           <div className="ball e"></div>
           <div className="ball f"></div>
           <div className="ball g"></div>
-          <div id="grid_who">
+          <div className="grid_who">
             <div class="center-align">
               <h1 className="WRT">¿Quiénes somos?</h1>
             </div>
@@ -415,15 +512,15 @@ handleSubmit(event) {
           </div>
         </div>
 
-        <div className="WD">
-          <div id="grid_who">
+        <div className="WD" id="portafolio">
+          <div className="grid_who">
             <div class="center-align">
               <h1 className="WRT">¿Quieres saber qué hacemos?</h1>
             </div>
             <div class="center-align">
               <p className="WDp">¡Échale un vistazo a nuestro trabajo!</p>
             </div>
-            <div class="row">
+            <div class="row" id='first'>
               <div class="center-align" className="center">
                 <ul class="collapsible">
                   <li>
@@ -473,19 +570,19 @@ handleSubmit(event) {
          </div>
 
           <div className="STo" id="Historias">
-            <div id="grid_who">
+            <div className="grid_who">
               <div class="center-align">
                 <h1 className="StoT">Historias de personas</h1>
               </div>
               <div class="row">
-              <div class="col s12 l4">
-                  <div className="Hbox"> 
+              <div class="col s12 l4" id='h1'>
+                  <div className="Hbox" > 
                     <div class="center-align">
                     <div id="himg1">
                     <img  className="Himg"  src="/IMG/emerson.png"></img>
                     </div>
                       <div className="hTitleBox" >
-                        <h3 id="hn1" >Emerson</h3>
+                        <h3 id="hn1">Emerson</h3>
                       </div>
                       <div id="ht1">
                       <h3 className="hTextBox"  >
@@ -495,7 +592,7 @@ handleSubmit(event) {
                     </div>
                   </div>
               </div>
-              <div class="col s12 l4">
+              <div class="col s12 l4" id='h2'>
                 <div class="center-align">
                   <div className="Hbox" >
                   <div class="center-align" >
@@ -514,7 +611,7 @@ handleSubmit(event) {
                   </div>
                 </div>
               </div>
-              <div class="col s12 l4">
+              <div class="col s12 l4" id='h3'>
                 <div class="center-align">
                   <div className="Hbox" >
                   <div class="center-align"  >
@@ -533,14 +630,139 @@ handleSubmit(event) {
                   </div>
                 </div>
               </div>
+              <div class="col s12 l4"  id='h4'>
+                  <div className="Hbox"> 
+                    <div class="center-align">
+                    <div id="himg4">
+                    <img  className="Himg"  src="/IMG/emerson.png"></img>
+                    </div>
+                      <div className="hTitleBox" >
+                        <h3 id="hn4">Amazon</h3>
+                      </div>
+                      <div id="ht4">
+                      <h3 className="hTextBox"  >
+                      Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                      herramientas y soluciones reales en tiempos record.</h3>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col s12 l4" id='h5'>
+                <div class="center-align">
+                  <div className="Hbox" >
+                  <div class="center-align" >
+                  <div id="himg5">
+                    <img className="Himg " src="/IMG/advisicon.png"></img>
+                    </div>
+                    <div className="hTitleBox" >
+                        <h3 id="hn5">Blizzard</h3>
+                    </div>
+                    <div id="ht5">
+                    <h3 className="hTextBox" >
+                    Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                    herramientas y soluciones reales en tiempos record.</h3>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 l4" id='h6'>
+                <div class="center-align">
+                  <div className="Hbox" >
+                  <div class="center-align"  >
+                 <div id="himg6">
+                    <img className="Himg" src="/IMG/Microsoft.png"></img>
+                    </div>
+                      <div className="hTitleBox">
+                        <h3 id="hn6" >MINAE</h3>
+                      </div>
+                      <div id="ht6">
+                        <h3 className="hTextBox"  >
+                        Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                        herramientas y soluciones reales en tiempos record.</h3>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 l4" id='h7'>
+                  <div className="Hbox" > 
+                    <div class="center-align">
+                    <div id="himg7">
+                    <img  className="Himg"  src="/IMG/emerson.png"></img>
+                    </div>
+                      <div className="hTitleBox" >
+                        <h3 id="hn7">CDB</h3>
+                      </div>
+                      <div id="ht7">
+                      <h3 className="hTextBox"  >
+                      Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                      herramientas y soluciones reales en tiempos record.</h3>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col s12 l4" id='h8'>
+                <div class="center-align">
+                  <div className="Hbox" >
+                  <div class="center-align" >
+                  <div id="himg8">
+                    <img className="Himg " src="/IMG/advisicon.png"></img>
+                    </div>
+                    <div className="hTitleBox" >
+                        <h3 id="hn8">EY</h3>
+                    </div>
+                    <div id="ht8">
+                    <h3 className="hTextBox" >
+                    Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                    herramientas y soluciones reales en tiempos record.</h3>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 l4" id='h9'>
+                <div class="center-align">
+                  <div className="Hbox" >
+                  <div class="center-align"  >
+                 <div id="himg9">
+                    <img className="Himg" src="/IMG/Microsoft.png"></img>
+                    </div>
+                      <div className="hTitleBox">
+                        <h3 id="hn9" >Caprhizza</h3>
+                      </div>
+                      <div id="ht9">
+                        <h3 className="hTextBox"  >
+                        Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
+                        herramientas y soluciones reales en tiempos record.</h3>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+              <div>
+              <div class="left-lign">
+                <a className="back" id="hback" onClick={() => this.hback(-3)}>
+                <i class="medium material-icons">keyboard_arrow_left</i></a>
+              </div>
+              </div>
+              <div>
+              <div class="right-align">
+              <a  className="next" id="hnext" onClick={() => this.hback(3)}>
+              <i class="medium  material-icons">keyboard_arrow_right</i>
+                    
+                  </a>
+                
               </div>
               </div>
           </div>
           
           <div className="OS" id="bgo">
-          <div id="grid_who">
+          <div className="grid_who">
             <div id="atra" className="atras">
-              <button
+              <a
                 class="center-align white-text"
                 className="ab"
                 onClick={() => this.back()}
@@ -549,7 +771,7 @@ handleSubmit(event) {
                   chevron_left
                 </i>
                 {this.state.SystemName}
-              </button>
+              </a>
             </div>
             <div class="center-align" id="T">
               <h1 className="OST">Nuestros Sistemas</h1>
@@ -664,17 +886,17 @@ handleSubmit(event) {
             </div>
             <div>
               <div class="left-lign">
-                <button className="back" id="back" onClick={() => this.aback()}>
-                <i class="medium material-icons">keyboard_arrow_left</i></button>
+                <a className="back" id="back" onClick={() => this.aback()}>
+                <i class="medium material-icons">keyboard_arrow_left</i></a>
               </div>
               </div>
               <div>
               <div class="right-align">
-                <button className="next" id="next" onClick={() => this.anext()}>
+                <a className="next" id="next" onClick={() => this.anext()}>
                   <div class="hide-on-med-and-down">
                     <i class="medium material-icons">keyboard_arrow_right</i>
                   </div>
-                </button>
+                </a>
               </div>
               </div>
             </div>

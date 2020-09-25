@@ -124,6 +124,9 @@ body{
 .hide {
   display: none;
 }
+a{
+  cursor: pointer;
+}
 /* Change the white to any color */
 input [type=text]:-webkit-autofill,
 input [type=text]:-webkit-autofill:hover, 
@@ -149,6 +152,7 @@ font-weight: normal;
 font-size: 36px;
 line-height: 43px;
 }
+
 .Slogan{
 margin-block-start: 2em;
 font-family: Coolvetica;
@@ -207,7 +211,7 @@ video{
   position: relative;
 z-index: 1000;
 }
-#grid_who{
+.grid_who{
   display: grid;
   
 }
@@ -523,6 +527,8 @@ line-height: 42px;
 color: #fff;
 border: none;
 background-color: transparent;
+height: 7vh;
+width: 7vw;
 }
 #systems{
   min-width: 100%;
@@ -666,7 +672,7 @@ font-size: 53px;
 line-height: 42px;
 color: rgb(116, 19, 19);
 border: none;
-background-color: transparent;
+background: transparent;
 top: 55vh;
 margin-left:95vw;
 }
@@ -679,10 +685,10 @@ font-size: 53px;
 line-height: 42px;
 color: rgb(116, 19, 19);
 border: none;
-background-color: transparent;
+background: transparent;
 bottom: 21vw;
-
 }
+
 .box{
 width: 100%;
 background: red;
@@ -1041,14 +1047,14 @@ margin-top: -4vh;
 }
 .Hbox{
   width: 95vw;
-  height: 36vh;
+  height: 26vh;
   background:#E6E6E6;
   border-radius: 25px;
   margin-left: 0px;
   padding-left: 0px;
 }
 .Himg{
-margin-top: 9vh;
+margin-top: 4vh;
 margin-right: 48vw;
 width: 18vh;
 height: auto;
