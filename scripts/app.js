@@ -365,24 +365,24 @@ handleSubmit(event) {
             color: (this.state.systemPosition===3) ? "white" :  "black"
           }}
           >
-          <a class="center-align white-text"
+          <button class="center-align white-text"
                 className="ab" onClick={()=> {this.goBackSystem()}}
                 style={{color: (this.state.systemPosition<5) ? "white" :  "black"}}
                 ><i class="material-icons medium  left" style={{color: (this.state.systemPosition<5) ? "white" :  "black"}}>
                   chevron_left
-                </i></a>
-                <a class="center-align white-text"
+                </i></button>
+                <button class="center-align white-text"
                 className="kpbtn" onClick={()=> {this.OS(4)}}
                 style={{color: "white"}}
                 ><i class="material-icons medium  left" style={{display: (this.state.systemPosition==2) ? "block" :  "none"}}>
                   chevron_right
-                </i></a>
-                <a class="center-align white-text"
+                </i></button>
+                <button class="center-align white-text"
                 className="kpbtnb" onClick={()=> {this.OS(2)}}
                 style={{color: "white"}}
                 ><i class="material-icons medium  left" style={{display: (this.state.systemPosition==4) ? "block" :  "none"}}>
                   chevron_left
-                </i></a>
+                </i></button>
           <div id='image'>
           <img class="Simg" src={this.state.systemImages[this.state.systemPosition]}></img>
           </div>
@@ -470,8 +470,8 @@ handleSubmit(event) {
               Ejectuamos ideas geniales.
             </p>
             <div class="left">
-              <button  className="ibutton" id="bs">
-                ¡Descubre más!
+              <button  className="ibutton" id="bs" >
+                <a href="#WR">¡Descubre más!</a>
               </button>
             </div>
             <div class="right">
@@ -744,16 +744,16 @@ handleSubmit(event) {
               </div>
               <div>
               <div class="left-lign">
-                <a className="back" id="hback" onClick={() => this.hback(-3)}>
-                <i class="medium material-icons">keyboard_arrow_left</i></a>
+                <button className="back" id="hback" onClick={() => this.hback(-3)}>
+                <i class="medium material-icons">keyboard_arrow_left</i></button>
               </div>
               </div>
               <div>
               <div class="right-align">
-              <a  className="next" id="hnext" onClick={() => this.hback(3)}>
+              <button className="next" id="hnext" onClick={() => this.hback(3)}>
               <i class="medium  material-icons">keyboard_arrow_right</i>
                     
-                  </a>
+                  </button>
                 
               </div>
               </div>
@@ -762,7 +762,7 @@ handleSubmit(event) {
           <div className="OS" id="bgo">
           <div className="grid_who">
             <div id="atra" className="atras">
-              <a
+              <button
                 class="center-align white-text"
                 className="ab"
                 onClick={() => this.back()}
@@ -771,7 +771,7 @@ handleSubmit(event) {
                   chevron_left
                 </i>
                 {this.state.SystemName}
-              </a>
+              </button>
             </div>
             <div class="center-align" id="T">
               <h1 className="OST">Nuestros Sistemas</h1>
@@ -886,17 +886,17 @@ handleSubmit(event) {
             </div>
             <div>
               <div class="left-lign">
-                <a className="back" id="back" onClick={() => this.aback()}>
-                <i class="medium material-icons">keyboard_arrow_left</i></a>
+                <button className="back" id="back" onClick={() => this.aback()}>
+                <i class="medium material-icons">keyboard_arrow_left</i></button>
               </div>
               </div>
               <div>
               <div class="right-align">
-                <a className="next" id="next" onClick={() => this.anext()}>
+                <button className="next" id="next" onClick={() => this.anext()}>
                   <div class="hide-on-med-and-down">
                     <i class="medium material-icons">keyboard_arrow_right</i>
                   </div>
-                </a>
+                </button>
               </div>
               </div>
             </div>

@@ -69,6 +69,9 @@ input-field:-internal-autofill-selected {
   background-image: none !important;
   color: -internal-light-dark(black, red) !important;
 }
+a{
+  color: #000;
+}
 .Simg{
 width: 35vw;
 vertical-align: sub;
@@ -181,6 +184,9 @@ margin-block-end: 0em;
   font-size: 3vw;
   line-height: 4vw;
   text-align: center;
+}
+.ibutton:focus{
+  background-color: #fff;
 }
 .ibutton:hover{
   height: 7.2vw;
@@ -412,6 +418,9 @@ margin-top: 25vw;
   background-color:  #E63C4C;
   border: none;
 }
+.EDA:focus{
+  background-color:  #E63C4C;
+}
 .AP{
   position: absolute;
   width: 18vw;
@@ -422,8 +431,9 @@ margin-top: 25vw;
   background-color:  #FFC872;
   border: none;
 }
-
-
+.AP:focus{
+  background-color:  #FFC872;
+}
 .KP{
   position: absolute;
   width: 18vw;
@@ -434,31 +444,8 @@ margin-top: 25vw;
   background-color:  #65C8D0;
   border: none;
 }
-.kpbtn{
-  position: absolute;
-  font-family: Gill Sans MT;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 53px;
-  line-height: 42px;
-  color: #741313;
-  border: none;
-  background-color: transparent;
-  top: 55vh;
-  margin-left: 95vw;
-}
-.kpbtnb{
-  position: absolute;
-  font-family: Gill Sans MT;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 53px;
-  line-height: 42px;
-  color: #741313;
-  border: none;
-  background-color: transparent;
-  top: 55vh;
-  margin-left: 0vw;
+.KP:focus{
+  background-color:  #65C8D0;
 }
 .MP{
   position: absolute;
@@ -469,6 +456,42 @@ margin-top: 25vw;
   border-radius: 160.5px;
   background-color:  #E63C4C;
   border: none;
+}
+.MP:focus{
+  background-color:  #E63C4C;
+}
+.kpbtn{
+  position: absolute;
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 42px;
+  color: #741313;
+  background-color: transparent;
+  border: none;
+  top: 55vh;
+  margin-left: 95vw;
+}
+.kpbtn:focus{
+  background-color: transparent;
+}
+.kpbtnb{
+  position: absolute;
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 42px;
+  color: #741313;
+  background-color: transparent;
+  border: none;
+  top: 55vh;
+  margin-left: 0vw;
+}
+.kpbtnb:focus{
+  background-color: transparent;
+
 }
 .MP:onclick{
   background-color: transparent;
@@ -493,7 +516,7 @@ color: #FFFFFF;
   display: flex;
   align-items: center;
   text-align: center;
-  margin-left: 3vw;
+  margin-left: 4vw;
   color: #FFFFFF;
 }
 .OST{
@@ -529,6 +552,9 @@ border: none;
 background-color: transparent;
 height: 7vh;
 width: 7vw;
+}
+.ab:focus{
+  background-color: transparent;
 }
 #systems{
   min-width: 100%;
@@ -676,6 +702,9 @@ background: transparent;
 top: 55vh;
 margin-left:95vw;
 }
+.next:focus{
+  background-color: transparent;
+}
 .back{
 position: relative;
 font-family: Gill Sans MT;
@@ -688,7 +717,9 @@ border: none;
 background: transparent;
 bottom: 21vw;
 }
-
+.back:focus{
+  background-color: transparent;
+}
 .box{
 width: 100%;
 background: red;

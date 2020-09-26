@@ -76,6 +76,10 @@ input-field:-internal-autofill-selected {
   color: -internal-light-dark(black, red) !important;
 }
 
+a {
+  color: #000;
+}
+
 .Simg {
   width: 35vw;
   vertical-align: sub;
@@ -239,6 +243,10 @@ input [type=text]:-webkit-autofill:active {
   font-size: 3vw;
   line-height: 4vw;
   text-align: center;
+}
+
+.ibutton:focus {
+  background-color: #fff;
 }
 
 .ibutton:hover {
@@ -512,6 +520,10 @@ video {
   border: none;
 }
 
+.EDA:focus {
+  background-color: #E63C4C;
+}
+
 .AP {
   position: absolute;
   width: 18vw;
@@ -521,6 +533,10 @@ video {
   border-radius: 160.5px;
   background-color: #FFC872;
   border: none;
+}
+
+.AP:focus {
+  background-color: #FFC872;
 }
 
 .KP {
@@ -534,32 +550,8 @@ video {
   border: none;
 }
 
-.kpbtn {
-  position: absolute;
-  font-family: Gill Sans MT;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 53px;
-  line-height: 42px;
-  color: #741313;
-  border: none;
-  background-color: transparent;
-  top: 55vh;
-  margin-left: 95vw;
-}
-
-.kpbtnb {
-  position: absolute;
-  font-family: Gill Sans MT;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 53px;
-  line-height: 42px;
-  color: #741313;
-  border: none;
-  background-color: transparent;
-  top: 55vh;
-  margin-left: 0vw;
+.KP:focus {
+  background-color: #65C8D0;
 }
 
 .MP {
@@ -571,6 +563,46 @@ video {
   border-radius: 160.5px;
   background-color: #E63C4C;
   border: none;
+}
+
+.MP:focus {
+  background-color: #E63C4C;
+}
+
+.kpbtn {
+  position: absolute;
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 42px;
+  color: #741313;
+  background-color: transparent;
+  border: none;
+  top: 55vh;
+  margin-left: 95vw;
+}
+
+.kpbtn:focus {
+  background-color: transparent;
+}
+
+.kpbtnb {
+  position: absolute;
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 42px;
+  color: #741313;
+  background-color: transparent;
+  border: none;
+  top: 55vh;
+  margin-left: 0vw;
+}
+
+.kpbtnb:focus {
+  background-color: transparent;
 }
 
 .MP:onclick {
@@ -606,7 +638,7 @@ video {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-left: 3vw;
+  margin-left: 4vw;
   color: #FFFFFF;
 }
 
@@ -646,6 +678,10 @@ video {
   background-color: transparent;
   height: 7vh;
   width: 7vw;
+}
+
+.ab:focus {
+  background-color: transparent;
 }
 
 #systems {
@@ -808,6 +844,10 @@ video {
   margin-left: 95vw;
 }
 
+.next:focus {
+  background-color: transparent;
+}
+
 .back {
   position: relative;
   font-family: Gill Sans MT;
@@ -819,6 +859,10 @@ video {
   border: none;
   background: transparent;
   bottom: 21vw;
+}
+
+.back:focus {
+  background-color: transparent;
 }
 
 .box {
