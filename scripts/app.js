@@ -12,7 +12,30 @@ function ret() {
   var instances2 = M.FormSelect.init(elems2, options); 
   var elems3 = document.querySelectorAll(".sidenav");
   var instances3 = M.Sidenav.init(elems3, options);
+  
 }
+function myFunction() {
+  let x= 0;
+  x = x += 1;
+  console.log(x);
+}
+/*
+window.onscroll=function(){
+  console.log( 
+    'top: '  + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
+    'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
+  );
+}
+function winS(){
+  console.log("No sea malcriado");
+
+document.addEventListener('scroll',
+  (event) => {
+  }, 
+  { passive: true }
+);
+console.log(event);
+}*/
 
 //Change the backgound color by interval💢🐦
 function changeColor() {
@@ -120,8 +143,22 @@ class SkemCW extends React.Component {
     ret();
     this.aback();
     this.hback(0);
-  }
+    window.addEventListener('scroll', this.handleScroll);
 
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+}
+handleScroll(event) {
+  
+  let scrollTop = event.srcElement.body.scrollTop,
+      itemTranslate = scrollTop ;
+      console.log(itemTranslate);
+      if(itemTranslate >= 100 || 110){
+        document.getElementById("navBar").style.backgroundColor = "rgba(0,0,0,0.8)";
+      }
+  
+}
   //Change the color of the background by clicking the button 💢🐦
   OS(x) {
     this.setState({
@@ -134,6 +171,7 @@ class SkemCW extends React.Component {
       isUserUsingSystems: false
     })
   }
+
   back() {
     var width = document.documentElement.clientWidth;
     console.log(width);
@@ -357,7 +395,7 @@ handleSubmit(event) {
 }
   render() {
     return (
-      <div>
+      <div >
 
         <div id="systems" style={{
             display: this.state.isUserUsingSystems ? "" : "none",
@@ -392,8 +430,10 @@ handleSubmit(event) {
           </div>
         </div>
         
-        <div className="contenedor" id="bgc">
-          <nav class="transparent ">
+        <div className="contenedor" id="bgc" onScroll="myFunction()">
+        <div class='navbar-fixed'>
+          <nav id='navBar'>
+          
             <div class="nav-wrapper">
 
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -411,7 +451,7 @@ handleSubmit(event) {
                     Areas
                   </a>
                   <ul id="dropdown1" class="dropdown-content transparent">
-                    <li class="transparent xd">
+                    <li class="transparent" id="dropdownFirst">
                       <a class="white-text" href="#portafolio">
                         <i class="material-icons white-text">folder</i>
                         Portafolio
@@ -444,25 +484,26 @@ handleSubmit(event) {
               </ul>
             </div>
           </nav>
+          </div>
 
           <ul id="slide-out" class="sidenav">
             <li>
               <div class="user-view">
                 <div class="background blue lighten-1">
                 </div>
-                <a href="#"><img class="circle" src="/IMG/WHITE.png"></img></a>
+                <a class='sidenav-close' href="#bgc"><img class="circle" src="/IMG/WHITE.png"></img></a>
                 
               </div>
             </li>
-            <li><a href="#bgc">Inicio</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#Historias">Historias</a></li>
-            <li><a href="#bgo">Sistemas</a></li>
-            <li><a href="#areas">Áreas</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#cnt">Contacto</a></li>
+            <li><a class='waves-effect waves-lightBlue sidenav-close' href="#bgc">Inicio</a></li>
+            <li><a class='waves-effect waves-lightBlue sidenav-close' href="#portafolio">Portafolio</a></li>
+            <li><a class='waves-effect waves-lightBlue sidenav-close' href="#Historias">Historias</a></li>
+            <li><a class='waves-effect waves-lightBlue sidenav-close' href="#bgo">Sistemas</a></li>
+            <li><a class='waves-effect waves-lightBlue sidenav-close' href="#areas">Áreas</a></li>
+            <li><a class='waves-effect waves-lightBlue sidenav-close' href="#galeria">Galeria</a></li>
+            <li><a class='waves-effect waves-lightBlue sidenav-close' href="#cnt">Contacto</a></li>
             <li><div class="divider"></div></li>
-            <li><a class="subheader">Subheader</a></li>
+            <li><a class="subheader">SKEMClub 2020</a></li>
           </ul>
   
           <div class="container">
@@ -743,19 +784,12 @@ handleSubmit(event) {
               </div>
               </div>
               <div>
-              <div class="left-lign">
-                <button className="back" id="hback" onClick={() => this.hback(-3)}>
-                <i class="medium material-icons">keyboard_arrow_left</i></button>
-              </div>
-              </div>
-              <div>
-              <div class="right-align">
+              <button className="back" id="hback" onClick={() => this.hback(-3)}>
+                <i class="medium material-icons">keyboard_arrow_left</i>
+              </button>
               <button className="next" id="hnext" onClick={() => this.hback(3)}>
-              <i class="medium  material-icons">keyboard_arrow_right</i>
-                    
-                  </button>
-                
-              </div>
+                <i class="medium  material-icons">keyboard_arrow_right</i>      
+              </button>
               </div>
           </div>
           

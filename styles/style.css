@@ -173,6 +173,10 @@ body {
   /* Ez clap XD*/
 }
 
+html, body {
+  height: 100%;
+}
+
 .hide {
   display: none;
 }
@@ -189,6 +193,33 @@ input [type=text]:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
+.section-search input.autocomplete {
+  color: #000;
+}
+
+.input-field .prefix.active {
+  color: #000 !important;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #000 !important;
+}
+
+.autocomplete-content li .highlight {
+  color: red !important;
+}
+
+.waves-effect.waves-lightBlue .waves-ripple {
+  /* The alpha value allows the text and background color
+  of the button to still show through. */
+  background-color: #90caf9;
+}
+
 .contenedor {
   position: relative;
   width: 100vw;
@@ -197,6 +228,7 @@ input [type=text]:-webkit-autofill:active {
   display: -ms-grid;
   display: grid;
   z-index: 1000;
+  overflow: scroll;
 }
 
 /*.transparent{
@@ -208,6 +240,10 @@ input [type=text]:-webkit-autofill:active {
   font-weight: normal;
   font-size: 36px;
   line-height: 43px;
+}
+
+#navBar {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .Slogan {
@@ -263,7 +299,6 @@ input [type=text]:-webkit-autofill:active {
 
 .WRT {
   position: relative;
-  z-index: 1000;
   font-family: Coolvetica;
   font-style: normal;
   font-weight: normal;
@@ -278,7 +313,7 @@ input [type=text]:-webkit-autofill:active {
 
 video {
   position: relative;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .grid_who {
@@ -293,7 +328,7 @@ video {
   font-size: 18px;
   line-height: 21px;
   position: relative;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .WRi {
@@ -370,6 +405,10 @@ video {
   display: -ms-grid;
   display: grid;
   display: block;
+}
+
+#dropdownFirst {
+  margin-top: 70px;
 }
 
 #root {
@@ -702,7 +741,7 @@ video {
 }
 
 #systems h2 {
-  font-size: 36px;
+  font-size: 22px;
 }
 
 #systems #content {
@@ -840,8 +879,8 @@ video {
   color: #741313;
   border: none;
   background: transparent;
-  top: 55vh;
-  margin-left: 95vw;
+  top: 100vh;
+  margin-left: 70vw;
 }
 
 .next:focus {
@@ -981,6 +1020,9 @@ video {
 }
 
 @media only screen and (max-width: 1000px) {
+  .STo {
+    height: 230vh;
+  }
   .WRi {
     width: 100vw;
     margin-top: 20px;
@@ -998,7 +1040,6 @@ video {
   }
   .WRT {
     position: relative;
-    z-index: 1000;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
@@ -1179,6 +1220,34 @@ video {
     margin-left: 2vw;
     margin-top: 2vw;
   }
+  .next {
+    position: absolute;
+    font-family: Gill Sans MT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 53px;
+    line-height: 42px;
+    color: #741313;
+    border: none;
+    background: transparent;
+    top: 50vh;
+    margin-left: 75vw;
+    width: 5vw;
+  }
+  .back {
+    position: absolute;
+    font-family: Gill Sans MT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 53px;
+    line-height: 42px;
+    color: #741313;
+    border: none;
+    background: transparent;
+    top: -50vh;
+    width: 5vw;
+    margin-bottom: -49vh;
+  }
   .EDA {
     position: absolute;
     width: 35vw;
@@ -1243,47 +1312,6 @@ video {
     width: 63vw;
     margin-top: 0vw;
     margin-left: 25vw;
-  }
-  .Hbox {
-    width: 95vw;
-    height: 26vh;
-    background: #E6E6E6;
-    border-radius: 25px;
-    margin-left: 0px;
-    padding-left: 0px;
-  }
-  .Himg {
-    margin-top: 4vh;
-    margin-right: 48vw;
-    width: 18vh;
-    height: auto;
-    border: none;
-    margin-left: 2vw;
-  }
-  .hTitleBox {
-    font-family: Coolvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 58px;
-    margin-top: -20vh;
-    margin-right: 45vw;
-    margin-left: 22vh;
-  }
-  .hTitleBox h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  .hTextBox {
-    font-family: Gill Sans MT;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 4vw;
-    line-height: 4vw;
-    text-align: center;
-    margin-left: 22vh;
-    text-align: left;
-    margin-top: 0px;
   }
   .Abox {
     width: 90%;
@@ -1397,6 +1425,53 @@ video {
     -webkit-box-flex: 100%;
             flex: 100%;
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .STo {
+    height: 120vh;
+  }
+  .Hbox {
+    width: 95vw;
+    height: 26vh;
+    background: #E6E6E6;
+    border-radius: 25px;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .Himg {
+    margin-top: 4vh;
+    margin-right: 48vw;
+    width: 18vh;
+    height: auto;
+    border: none;
+    margin-left: 2vw;
+  }
+  .hTitleBox {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: -20vh;
+    margin-right: 45vw;
+    margin-left: 22vh;
+  }
+  .hTitleBox h3 {
+    margin-top: 0vw;
+    margin-bottom: 0px;
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+  .hTextBox {
+    font-family: Gill Sans MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 4vw;
+    text-align: center;
+    margin-left: 22vh;
+    text-align: left;
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
