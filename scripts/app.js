@@ -1,9 +1,23 @@
 //Ivan Valverde🐦
 //Angel Ureña💢
+/*
+Some general comments:
+  Please comments your code, you are two people collaborating together, even if you could talk and communicate, you are still a team
+and if someone, like me, reads the code, we wouldn´t understand.
+  Also, please identate and format your code. Reading code down there was quite difficult.
+  Seeing as you are using react, you should modulate your code. Learning how to use components and using them would help with readibility
+and with technical stuff like response times. 
+  remember that variables', functions' and methods' names should be representative of what they do.
+  When you code, try to mantain a single naming style (using uppercase only at the middle, using underscores, never capitalizing...)
+  Good Job overall! but try to remember these tips as coding is the same as speaking a language, and if you don´t understand 
+  what someone is saying to you, then language loses it purpose.
+*/
 let options = {
   accordion: null,
 };
-function ret() {   
+//ret? function names should be representative of what they do
+function ret() { 
+  //try to say what each elem and instance is, variable names should represent what the variable is holding
   var elems = document.querySelectorAll(".dropdown-trigger");   
   var instances = M.Dropdown.init(elems);   
   var elems1 = document.querySelectorAll(".collapsible");   
@@ -14,11 +28,13 @@ function ret() {
   var instances3 = M.Sidenav.init(elems3, options);
   
 }
+//Function names should be representative of what the function does
 function myFunction() {
   let x= 0;
   x = x += 1;
   console.log(x);
 }
+//why keep all these commented lines if you are not using them? they pollute the code
 /*
 window.onscroll=function(){
   console.log( 
@@ -39,6 +55,8 @@ console.log(event);
 
 //Change the backgound color by interval💢🐦
 function changeColor() {
+  //When you call ChangeColor you are sending a parameter which you never use.
+  //What does 'y' stands for. Variables name should be representative of what value they hold
   let y = 0;
   setInterval(function () {
     y += 1;
@@ -90,6 +108,7 @@ class SkemCW extends React.Component {
       email: '',
       text: '',
       select: '',
+      //what colors do these correspond to, especifically
       colors: ["black", "white", "green", "yellow", "red"],
       systemColors: [
         "linear-gradient(75.51deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(247.47deg, #E83C4C -3.23%, #E83C4C -3.23%)",
@@ -99,6 +118,8 @@ class SkemCW extends React.Component {
         "linear-gradient(76.43deg, #8052C0 -0.49%, rgba(13, 27, 146, 0) 51.03%), linear-gradient(0deg, #386FCB, #386FCB)",
         "white"
       ],
+      //you should use an Array filled with objects instead of using a "matrix" (it´s called "2D Array", vector is just an Array)
+      //using a Object filled-Array helps with memory AND legibility (systemMatrix[1].name is easier too read than systemMatrix[1][0])
       systemMatrix: [
         ["E.D.A", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
         ["Agente de Producción", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat unde, reiciendis sit labore molestiae corrupti nemo, odit pariatur dignissimos natus laudantium ut fuga eum esse repudiandae asperiores expedita culpa?"],
@@ -129,6 +150,7 @@ class SkemCW extends React.Component {
       systemPosition: 0,
       SystemName: ""
     };
+    //which change is each of these handling? Method names should be representative of what they do
     this.handleChange = this.handleChange.bind(this);
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
@@ -138,7 +160,9 @@ class SkemCW extends React.Component {
   
   componentDidMount() {
     let indexOfColor = 0;
+    //what is InitialNum used for?
     let initialNum = 1;
+    //As said before, you aren´t using this parameter
     changeColor(indexOfColor);
     ret();
     this.aback();
@@ -151,7 +175,8 @@ class SkemCW extends React.Component {
 }
 handleScroll(event) {
   
-  let scrollTop = event.srcElement.body.scrollTop,
+  let scrollTop = event.srcElement.body.scrollTop,//just a colon? shouldn't it be a semicolon
+      //redundancy. Why use itemTranslate when you already declared scrollTop?
       itemTranslate = scrollTop ;
       console.log(itemTranslate);
       if(itemTranslate >= 100 || 110){
@@ -160,6 +185,7 @@ handleScroll(event) {
   
 }
   //Change the color of the background by clicking the button 💢🐦
+  //what does OS stands for? function names should be intuitive
   OS(x) {
     this.setState({
       systemPosition: x,
@@ -208,6 +234,7 @@ handleScroll(event) {
     document.getElementById("ds").style.display = "none";
     document.getElementById("next").style.display = "none";
   } else{
+    //identation plz
         document.getElementById("back").style.display = "none";
     document.getElementById("ar").style.display = "block";
     document.getElementById("li").style.display = "block";
@@ -244,8 +271,10 @@ handleScroll(event) {
 
 
   hback(res){
+  //bad identation
     let stateNum = this.state.hcarrousel;
   let Num = stateNum+res;
+  //instead of using a lot of 'if' and 'else if' use a switch.
   if (Num==1){
     document.getElementById("himg1").style.display = "block";
     document.getElementById("himg2").style.display = "block";
@@ -372,7 +401,7 @@ else if(Num==7){
   })
 }
 
-
+//what change are each of them handling? method names should be representative of what they do.
 handleChange(event) {
   this.setState({name: event.target.value});
 }
@@ -387,6 +416,8 @@ handleChange3(x) {
 }
 
 handleSubmit(event) {
+  //Alerts are ugly. Why not create a modal/pop up component that shows all these info
+  //in case it is just for testing, then ude the console
   alert('A name was submitted: ' + this.state.name);
   alert('An Email was submitted: ' + this.state.email);
   alert('A Select was submitted: ' + this.state.select);
@@ -396,7 +427,7 @@ handleSubmit(event) {
   render() {
     return (
       <div >
-
+        {/*ids should be more specific or unique, i´m going to put this comment in some examples, but you should look at all the different cases where this could be bettered*/}
         <div id="systems" style={{
             display: this.state.isUserUsingSystems ? "" : "none",
             background: this.state.systemColors[this.state.systemPosition],
@@ -421,15 +452,17 @@ handleSubmit(event) {
                 ><i class="material-icons medium  left" style={{display: (this.state.systemPosition==4) ? "block" :  "none"}}>
                   chevron_left
                 </i></button>
+          {/*ids should be more specific or unique*/}
           <div id='image'>
           <img class="Simg" src={this.state.systemImages[this.state.systemPosition]}></img>
           </div>
+          {/*ids should be more specific or unique*/}
           <div id='content'>
             <h1><b>{this.state.systemMatrix[this.state.systemPosition][0]}</b></h1>
             <h2>{this.state.systemMatrix[this.state.systemPosition][1]}</h2>
           </div>
         </div>
-        
+        {/*ids should be more specific or unique*/}
         <div className="contenedor" id="bgc" onScroll="myFunction()">
         <div class='navbar-fixed'>
           <nav id='navBar'>
@@ -507,22 +540,25 @@ handleSubmit(event) {
           </ul>
   
           <div class="container">
+            {/*ids should be more specific or unique*/}
             <p className="Slogan" id="text">
               Ejectuamos ideas geniales.
             </p>
             <div class="left">
+              {/*ids should be more specific or unique*/}
               <button  className="ibutton" id="bs" >
                 <a href="#WR">¡Descubre más!</a>
               </button>
             </div>
             <div class="right">
+              {/*ids should be more specific or unique*/}
               <div id="img" className="img">
                 <img class="img" src="/IMG/Direccion de Arte.png"></img>
               </div>
             </div>
           </div>
         </div>
-
+        {/*ids should be more specific or unique*/}
         <div className="WR" id='WR'>
           <div className="ball a"></div>
           <div className="ball b"></div>
@@ -561,6 +597,7 @@ handleSubmit(event) {
             <div class="center-align">
               <p className="WDp">¡Échale un vistazo a nuestro trabajo!</p>
             </div>
+            {/*ids should be more specific or unique*/}
             <div class="row" id='first'>
               <div class="center-align" className="center">
                 <ul class="collapsible">
@@ -609,13 +646,14 @@ handleSubmit(event) {
             </div>
           </div>
          </div>
-
+          {/*ids should be more specific or unique*/}
           <div className="STo" id="Historias">
             <div className="grid_who">
               <div class="center-align">
                 <h1 className="StoT">Historias de personas</h1>
               </div>
               <div class="row">
+              {/*ids should be more specific or unique*/}
               <div class="col s12 l4" id='h1'>
                   <div className="Hbox" > 
                     <div class="center-align">
@@ -623,8 +661,10 @@ handleSubmit(event) {
                     <img  className="Himg"  src="/IMG/emerson.png"></img>
                     </div>
                       <div className="hTitleBox" >
+                        {/*ids should be more specific or unique*/}
                         <h3 id="hn1">Emerson</h3>
                       </div>
+                      {/*ids should be more specific or unique*/}
                       <div id="ht1">
                       <h3 className="hTextBox"  >
                       Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
@@ -633,6 +673,7 @@ handleSubmit(event) {
                     </div>
                   </div>
               </div>
+              {/*ids should be more specific or unique*/}
               <div class="col s12 l4" id='h2'>
                 <div class="center-align">
                   <div className="Hbox" >
@@ -641,8 +682,10 @@ handleSubmit(event) {
                     <img className="Himg " src="/IMG/advisicon.png"></img>
                     </div>
                     <div className="hTitleBox" >
+                      {/*ids should be more specific or unique*/}
                         <h3 id="hn2">Advisicon</h3>
                     </div>
+                    {/*ids should be more specific or unique*/}
                     <div id="ht2">
                     <h3 className="hTextBox" >
                     Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
@@ -652,16 +695,20 @@ handleSubmit(event) {
                   </div>
                 </div>
               </div>
+              {/*ids should be more specific or unique*/}
               <div class="col s12 l4" id='h3'>
                 <div class="center-align">
                   <div className="Hbox" >
                   <div class="center-align"  >
+                  {/*ids should be more specific or unique*/}
                  <div id="himg3">
                     <img className="Himg" src="/IMG/Microsoft.png"></img>
                     </div>
                       <div className="hTitleBox">
+                        {/*ids should be more specific or unique*/}
                         <h3 id="hn3" >Microsoft</h3>
                       </div>
+                      {/*ids should be more specific or unique*/}
                       <div id="ht3">
                         <h3 className="hTextBox"  >
                         Trabajar con el club ha sido una experiencia agradable, los/las chicos(as) trabajan con mucha dedicación por crear 
@@ -1024,7 +1071,7 @@ handleSubmit(event) {
         </div>
 
         <div className="footer">
-
+          {/*what footer?*/}
         </div>
 
     </div>
