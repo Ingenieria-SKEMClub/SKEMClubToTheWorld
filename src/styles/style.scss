@@ -52,12 +52,12 @@ margin-bottom: 10px;
 }
 /* valid color */
 .input-field input[type=text].valid {
-  border-bottom: 1px solid yellow  !important;
-  box-shadow: 0 1px 0 0 yellow  !important;
+  border-bottom: 1px solid rgb(0, 255, 42)  !important;
+  box-shadow: 0 1px 0 0 rgb(0, 255, 42)  !important;
 }
 .input-field input[type=email].valid {
-  border-bottom: 1px solid yellow  !important;
-  box-shadow: 0 1px 0 0 yellow  !important;
+  border-bottom: 1px solid rgb(0, 255, 42)  !important;
+  box-shadow: 0 1px 0 0 rgb(0, 255, 42)  !important;
 }
 /* icon prefix focus color */
 .input-field .prefix.active {
@@ -72,12 +72,7 @@ input-field:-internal-autofill-selected {
 a{
   color: #000;
 }
-.carousel .carousel-indicators li {
-  width: .625rem;
-  height: .625rem;
-  cursor: pointer;
-  border-radius: 50%;
-}
+
 .carousel-indicators {
   position: absolute;
   /* right: 0; */
@@ -90,7 +85,7 @@ a{
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  /* padding-left: 0; */
+  padding-left: 0px; 
   /* margin-right: 15%; */
   margin-left: 40vw;
   list-style: none;
@@ -106,25 +101,46 @@ a{
   width: 3vw;
   height: 3vw;
   border-radius: 5rem;
-  margin-left: 2vw;
   text-indent: -999px;
   cursor: pointer;
   background-color: #b1abab;
   background-clip: padding-box;
+  
   //border-top: 10px solid transparent;
   //border-bottom: 10px solid transparent;
   opacity: .5;
   transition: opacity .6s ease;
 }
+
+.ico{
+  margin-right: 20px;
+}
+#dos{
+  margin-left: 5.5vw;
+}
+#tres{
+  margin-left: 5.5vw;
+}
 .bs{
   width: 25vw;
 }
 .Simg{
-width: 30vw;
+width: 20vw;
 vertical-align: sub;
 position: relative;
 //margin-top: 25%;
 margin-left: 17%;
+}
+.tT{
+  width: 52vw;
+}
+#content {
+ 
+  margin-left: 41vh;
+  margin-right: 53vh;
+  margin-top: 7vh;
+  width: 62vw;
+  height: 39vh;
 }
 .containerinner{
   display: block;
@@ -237,7 +253,7 @@ input:-webkit-autofill {
     background: linear-gradient(65.33deg, rgba(232, 94, 60, 0.81) 1.71%, rgba(232, 60, 163, 0) 50.49%), linear-gradient(233.59deg, #E83C4C -3.23%, #E83C4C -3.23%);
     display:grid;
     z-index: 1000;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 /*.transparent{
   position: fixed!important;
@@ -295,14 +311,23 @@ margin-block-end: 0em;
   display: block;
 
 }
+#ContactT{
+  position: relative;
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 43px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
 .WRT{
-
 position: relative;
 font-family: Coolvetica;
 font-style: normal;
 font-weight: normal;
-font-size: 46px;
-line-height: 43px;
+font-size: 35px;
+line-height: 35px;
 margin-top: 10vh;
 }
 .brand-logo{
@@ -367,8 +392,9 @@ line-height: 21px;
 .WD{
   position: relative;
   min-width: 100vw;
-  min-height: 100vh;
-  background-color: #f6f6f6;//#fefefe
+  min-height: 10vh;
+  padding-bottom: 20vh;
+  background-color: #f7f7f7;
   display: inline-block;
 }
 .WDT{
@@ -377,14 +403,15 @@ line-height: 21px;
   font-family: Coolvetica;
   font-style: normal;
   font-weight: normal;
-  font-size: 46px;
-  line-height: 43px;
-  margin-top: 10vh;
+  font-size: 35px;
+  line-height: 35px;
+  margin-top: 20vh;
   }
   .WDp{
     margin-bottom: 20px;
     margin-top: 10px;
-    font-size: 25px;
+    font-size: 18px;
+    line-height: 21px;
     }
 #dropdownFirst{
   margin-top: 70px;
@@ -405,6 +432,30 @@ line-height: 21px;
   align-items: center;
   justify-content: center;
 }
+#github{
+  background: #24292e;
+}
+#behance{
+  background: #053eff; 
+  background: -moz-linear-gradient(45deg, #053eff 0%, #053eff 25%, #1a4fff 50%, #3061ff 75%, #4771fd 100%); 
+  background: -webkit-linear-gradient(45deg, #053eff 0%, #053eff 25%,#1a4fff 50%, #3061ff 75%, #4771fd 100%);
+  background: linear-gradient(45deg, #053eff 0%,#053eff 25%, #1a4fff 50%, #3061ff 75%, #4771fd 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#053eff', endColorstr='#83b7ff',GradientType=1 );
+}
+#face{
+  background: #006aff; 
+  background: -moz-linear-gradient(45deg, #006aff 0%, #006aff 25%, #1877fc 50%, #2982ff 75%, #368aff 100%); 
+  background: -webkit-linear-gradient(45deg, #006aff 0%, #006aff 25%,#1877fc 50%, #2982ff 75%, #368aff 100%);
+  background: linear-gradient(45deg, #006aff 0%,#006aff 25%, #1877fc 50%, #2982ff 75%, #368aff 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1877fc', endColorstr='#83b7ff',GradientType=1 );
+}
+#insta{
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%); 
+  background: -webkit-linear-gradient(45deg, #bc1888 0%, #cc2366 25%,#dc2743 50%, #e6683c 75%, #f09433 100%);
+  background: linear-gradient(45deg, #bc1888 0%,#cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc1888', endColorstr='#f09433',GradientType=1 );
+}
 .center{
   position: relative;
   display: inline-block;
@@ -415,10 +466,11 @@ line-height: 21px;
 .STo{
 position: relative;
 min-width: 100vw;
-min-height: 110vh;
+min-height: 100vh;
+
 background-color: #f6f6f6;
 display: inline-block;
-padding-bottom: 5vh;
+padding-bottom: 8vw;
 //margin-top: 57vw;
 }
 
@@ -458,8 +510,10 @@ padding-bottom: 5vh;
   font-family: Coolvetica;
   font-style: normal;
   font-weight: normal;
+  font-size: 50px;
+  line-height: 35px;
+  padding-bottom: 5vh;
 }
-
 .eme {
   width: 15vw;
   height: 10vw;
@@ -483,12 +537,13 @@ padding-bottom: 5vh;
 .Hbox{
   width: 80%;
   margin-left: 10%;
-  height: 60vh;
+  min-height: 30vh;
   background:#E6E6E6;
   margin-top: 10vw;
   border-radius: 75px;
   padding-right: 10px;
   padding-left: 10px;
+  padding-bottom: 10px;
 }
 .SToh{
   font-family: Coolvetica;
@@ -501,9 +556,9 @@ color: #333333;
 .STot{
   font-family: Gill Sans MT;
 font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 28px;
+font-weight: normal;
+font-size: 35px;
+line-height: 35px;
 text-align: center;
 color: #000000;
 margin-top: 3vw;
@@ -511,7 +566,8 @@ margin-top: 3vw;
 .OS{
   position: relative;
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
+  padding-bottom: 10vh;
   background-color: #f6f6f6;
   display:grid;
   display: block;
@@ -594,10 +650,11 @@ margin-top: 25vw;
   font-size: 53px;
   line-height: 42px;
   color: #741313;
-  background-color: transparent;
+  background-color: transparent; 
   border: none;
-  top: 55vh;
   margin-left: 0vw;
+  top: 60vh;
+  overflow-y: hidden;
 }
 .kpbtnb:focus{
   background-color: transparent;
@@ -621,8 +678,8 @@ color: #FFFFFF;
   font-family: Coolvetica;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 21px;
   align-items: center;
   text-align: center;
   color: #000;
@@ -642,8 +699,8 @@ color: #FFFFFF;
   font-family: Coolvetica;
 font-style: normal;
 font-weight: normal;
-font-size: 82px;
-line-height: 98px;
+font-size: 50px;
+line-height: 35px;
 color: #000000;
 }
 .OSP{
@@ -697,7 +754,9 @@ width: 7vw;
 .Areas{
 position: relative;
 width: 100vw;
-height: 110vh;
+max-height: 248vh;
+min-height: 70vh;
+padding-bottom: 10vh;
 background-color: #f6f6f6;
 }
 
@@ -705,22 +764,24 @@ background-color: #f6f6f6;
 font-family: Coolvetica;
 font-style: normal;
 font-weight: normal;
-font-size: 82px;
-line-height: 98px;
+font-size: 50px;
+line-height: 35px;
 text-align: center;
 margin-top: -3px !important;
 margin-bottom: 0px !important;
+padding-bottom: 5vh;
 color: #000000;
 }
 .Abox{
   width: 70%;
   margin-left: 15%;
-  height: 60vh;
+  max-height: 60vh;
   background:#E6E6E6;
   margin-top: 10vw;
   border-radius: 75px;
   padding-right: 10px;
   padding-left: 10px;
+  padding-bottom: 10vh;
 }
 .Abutton{
   margin-top: 2vh;
@@ -749,14 +810,14 @@ border-bottom-color: #C4C4C4;
 font-family: Coolvetica;
 font-style: normal;
 font-weight: normal;
-font-size: 48px;
-line-height: 58px;
+font-size: 35px;
+line-height: 35px;
 }
 .hTextBox{
 font-family: Gill Sans MT;
 font-style: normal;
 font-weight: bold;
-font-size: 24px;
+font-size: 20px;
 line-height: 28px;
 text-align: center;
 }
@@ -805,8 +866,8 @@ border-bottom-color: #C4C4C4;
 font-family: Coolvetica;
 font-style: normal;
 font-weight: normal;
-font-size: 48px;
-line-height: 58px;
+font-size: 45px;
+line-height: 45px;
 }
 .next {
   position: relative;
@@ -819,7 +880,7 @@ line-height: 58px;
   border: none;
   background: transparent;
   bottom: 23vw;
-  margin-left: 94vw;
+  margin-left: 93vw;
 }
 .next:focus{
   background-color: transparent;
@@ -901,9 +962,11 @@ width: 100%;
 .Galery{
   position: relative;
   min-width: 100vw;
-  min-height: 110vh;
+  min-height: 10vh;
   background-color: #f6f6f6;
   display: inline-block;
+  padding-top: 10vw;
+  padding-bottom: 10px;
   }
   .CNT {
     position: relative;
@@ -914,19 +977,25 @@ width: 100%;
 .cnt{ 
   position: relative;
   width: 85vw;
-  min-height: 69vh;
+  min-height: 30vh;
   top: 1vh;
   background: rgba(232, 60, 76, 0.96);
   display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5vh;
 } 
-
+.cntInput{
+  margin-right: 10px;
+  margin-left: 10px;
+}
 .cntT{
   font-family: Coolvetica;
 font-style: normal;
 font-weight: normal;
 font-size: 31px !important;
 line-height: 43px;
-margin-top: -4vh;
+margin-top: -1vh;
 }
 #submit{   
   width: 10vw;
@@ -940,8 +1009,293 @@ margin-top: -4vh;
   width: 100vw;     
   height: 45vh;     
   background-color: #2087FF;     
+  margin-top: 10vh;
+}
+@media only screen and (max-width: 1024px) {
+
+  nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+  .Simg {
+    width: 27vw;
+    vertical-align: sub;
+    position: relative;
+    margin-left: 50%;
+    margin-top: -5vh;
+}
+/*
+  nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 3.1rem;
+    padding: 0;
+}
+.Stext{
+  font-size: 40px !important; 
+}
+.cntT {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px !important;
+  line-height: 43px;
+  margin-top: -1vh;
+}
+  #submit {
+    width: 20vw;
+    height: 5vh;
+    font-size: 25px;
+}*/
+  #content {
+    margin-left: 11vh;
+    margin-right: 53vh;
+    margin-top: 7vh;
+    width: 62vw;
+    height: 39vh;
+}
+  .OSe {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 25px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
 }
 
+  #EDAt {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+    line-height: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.OSp {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2vw;
+  line-height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+.EDA{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 7vw;
+  margin-top: 55vh;    border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}
+.AP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 30vw;
+  margin-top: 55vh;
+  border-radius: 160.5px;
+  background-color:  #FFC872;
+  border: none;
+}
+
+.KP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 53vw;
+  margin-top: 55vh;
+  border-radius: 160.5px;
+  background-color: #65C8D0;
+  border: none;
+}
+.MP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 76vw;
+  margin-top: 55vh;
+  border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}  
+  .cnt {
+    position: relative;
+    width: 85vw;
+    min-height: 59vh;
+    top: 1vh;
+    background: rgba(232, 60, 76, 0.96);
+    display: inline-block;
+}
+
+
+}
+
+@media only screen and (max-height: 1366px) {
+
+  nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+  .Simg {
+    width: 21vw; 
+    vertical-align: sub;
+    position: relative;
+    margin-left: 50%;
+    margin-top: -5vh;
+}
+/*
+  nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 3.1rem;
+    padding: 0;
+}
+.Stext{
+  font-size: 40px !important; 
+}
+.cntT {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px !important;
+  line-height: 43px;
+  margin-top: -1vh;
+}
+  #submit {
+    width: 20vw;
+    height: 5vh;
+    font-size: 25px;
+}*/
+  #content {
+    margin-left: 11vh;
+    margin-right: 53vh;
+    margin-top: 7vh;
+    width: 62vw;
+    height: 39vh;
+}
+  .OSe {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 21px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+}
+
+  #EDAt {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+    line-height: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.OSp {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2vw;
+  line-height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+.EDA{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 7vw;
+  margin-top: 40vh;    border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}
+.AP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 30vw;
+  margin-top: 40vh;
+  border-radius: 160.5px;
+  background-color:  #FFC872;
+  border: none;
+}
+
+.KP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 53vw;
+  margin-top: 40vh;
+  border-radius: 160.5px;
+  background-color: #65C8D0;
+  border: none;
+}
+.MP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 76vw;
+  margin-top: 40vh;
+  border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}  
+  .cnt {
+    position: relative;
+    width: 85vw;
+    min-height: 59vh;
+    top: 1vh;
+    background: rgba(232, 60, 76, 0.96);
+    display: inline-block;
+}
+}
 @media only screen and (max-width: 1000px) {
 
   .WRi{
@@ -965,13 +1319,21 @@ margin-top: -4vh;
     animation-delay: 5s;
     animation-duration: 5s;
   }
-  .WRT{
+  #ContactT{
     position: relative;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
     font-size: 35px;
     line-height: 35px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .WRT{
+    position: relative;
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
     margin-top: 10vh;
   }
   .ibutton  {
@@ -993,6 +1355,37 @@ margin-top: -4vh;
     height: 7.2vw;
     width: 22.2vw;
   }
+  #content{
+    font-size: 11px;
+    margin-right: 42vh;
+    margin-left: 5vh;
+    margin-top: 7vh;
+    width: 90vw;
+    height: 30vh;
+  }
+  .carousel-indicators li {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+    width: 4vw;
+    height: 4vw;
+  }
+  #dos{
+    margin-left: 4vw;
+  }
+  #tres{
+    margin-left: 4vw;
+  }
+  .Simg {
+    width: 40vw;
+    vertical-align: sub;
+    position: relative;
+    margin-left: 30%;
+    margin-top: -2vh;
+  }
+
   .OST{
     font-family: Coolvetica;
   font-style: normal;
@@ -1036,7 +1429,8 @@ line-height: 4vw;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 46px;
+    font-size: 35px;
+    line-height: 35px;
   }
   .cont{
     position: absolute;
@@ -1096,12 +1490,9 @@ line-height: 4vw;
   .STot{
     font-family: Gill Sans MT;
     font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 10px;
+    font-weight: normal;
     text-align: center;
     color: #000000;
-    width: 63vw;
     margin-top: 0vw;
     margin-left: 25vw;
   }
@@ -1236,16 +1627,17 @@ line-height: 4vw;
 }
 .Abox{
 width: 90%;
-height: 36vh;
+max-height: 60vh;
 background:#E6E6E6;
 border-radius: 50px;
 margin-left: 0px;
 padding-left: 0px;
 margin: 5%;
+padding-bottom: 10vh;
 
 }
 .Aimg{
-  margin-top: 9vh;
+  margin-top: 4vh;
   margin-right: 49vw;
   width: 18vh;
   height: auto;
@@ -1258,7 +1650,7 @@ margin: 5%;
   font-weight: normal;
   font-size: 10px;
   line-height: 44px;
-  margin-top: -22vh;
+  margin-top: -16vh;
   margin-right: 45vw;
   margin-left: 23vh;
   }
@@ -1278,8 +1670,10 @@ margin: 5%;
   margin-top: 5px;
   }
 .Areas{
-height: 248vh !important;
+max-height: 248vh;
 position: relative;
+min-height: 70vh;
+padding-bottom: 10vh;
 width: 100vw;
 background-color: #f6f6f6;
 }
@@ -1325,7 +1719,7 @@ background-color: #f6f6f6;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 29px;
     color: white;
     -webkit-margin-after: 0em;
@@ -1335,8 +1729,6 @@ background-color: #f6f6f6;
   font-family: Gill Sans MT;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
   position: relative;
   z-index: 999;
   margin-top: -2vw;
@@ -1363,8 +1755,7 @@ background-color: #f6f6f6;
     animation-delay: 5s;
     animation-duration: 5s;
   }
-  .WRT{
-
+  #ContactT{
     position: relative;
     font-family: Coolvetica;
     font-style: normal;
@@ -1372,6 +1763,14 @@ background-color: #f6f6f6;
     font-size: 46px;
     line-height: 43px;
     margin-top: 10vh;
+  }
+  .WRT{
+    position: relative;
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
   .ibutton  {
     height: 10vw;
@@ -1398,24 +1797,23 @@ background-color: #f6f6f6;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 46px;
-    line-height: 43px;
     margin-top: 4vh;
     }
   .WDp{
     margin-bottom: -2vh;
     margin-top: -2vh;
-    font-size: 20px;
+    margin-bottom: 5vh;
     }
     .Hbox{
       width: 80%;
       margin-left: 10%;
-      height: 53vh;
+      min-height: 53vh;
       background:#E6E6E6;
       margin-top: 7vw;
       border-radius: 75px;
       padding-right: 10px;
       padding-left: 10px;
+      padding-bottom: 5vh;
     }
     .hTitleBox{
       border-bottom: solid;
@@ -1423,7 +1821,7 @@ background-color: #f6f6f6;
       font-family: Coolvetica;
       font-style: normal;
       font-weight: normal;
-      font-size: 48px;
+      font-size: 35px;
       line-height: 0px;
       margin-top: -6vw;
       margin-bottom: -1vw;
@@ -1498,7 +1896,8 @@ line-height: 4vw;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 46px;
+    font-size: 35px;
+    line-height: 35px;
     margin-top: -2vw;
   }
   .cont{
@@ -1560,11 +1959,8 @@ line-height: 4vw;
     font-family: Gill Sans MT;
     font-style: normal;
     font-weight: bold;
-    font-size: 11px;
-    line-height: 10px;
     text-align: center;
     color: #000000;
-    width: 63vw;
     margin-top: 0vw;
     margin-left: 25vw;
   }
@@ -1713,12 +2109,13 @@ line-height: 4vw;
 }
 .Abox{
 width: 90%;
-height: 36vh;
+max-height: 36vh;
 background:#E6E6E6;
 border-radius: 50px;
 margin-left: 0px;
 padding-left: 0px;
 margin: 5%;
+padding-bottom: 10vh;
 
 }
 .Aimg{
@@ -1755,7 +2152,9 @@ margin: 5%;
   margin-top: 3px;
   }
 .Areas{
-  min-height: 100vh !important;
+  max-height: 248vh;
+  min-height: 70vh;
+padding-bottom: 10vh;
   position: relative;
   min-width: 100vw;
   background-color: #f6f6f6;
@@ -1815,7 +2214,182 @@ margin: 5%;
 
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-height: 600px) {
+  .Hbox {
+      width: 80%;
+      margin-left: 10%;
+      min-height: 40vh;
+      background: #E6E6E6;
+      margin-top: 10vw;
+      border-radius: 75px;
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+  #content{
+    font-size: 11px;
+    margin-right: 42vh;
+    margin-left: 5vh;
+    margin-top: 7vh;
+    width: 90vw;
+    height: 30vh;
+  }
+  .Stext{
+    width: 60vw; 
+  }
+  .Simg {
+    width: 40vw;
+    vertical-align: sub;
+    position: relative;
+    margin-left: 30%;
+    margin-top: -2vh;
+  }
+  .OSe {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    margin-top: -5vh;
+}
+.EDA{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 5vw;
+  margin-top: 60vh;   
+ border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}
+#EDAt {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2vw;
+  line-height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+.AP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 28vw;
+  margin-top: 60vh;   
+  border-radius: 160.5px;
+  background-color:  #FFC872;
+  border: none;
+}
+.OSp {
+  font-family: Coolvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2vw;
+  line-height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.KP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 51vw;
+  margin-top: 60vh;   
+  border-radius: 160.5px;
+  background-color: #65C8D0;
+  border: none;
+}
+.MP{
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  left: 74vw;
+  margin-top: 60vh;   
+  border-radius: 160.5px;
+  background-color:  #E63C4C;
+  border: none;
+}
+.tT {
+  width: 99vw;
+}
+.Aimg {
+  margin-top: 9vh;
+  margin-right: 49vw;
+  width: 18vh;
+  height: auto;
+  border: none;
+  margin-left: -15vw;
+}
+.aTextBox {
+  font-family: Gill Sans MT;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4vw;
+  line-height: 3vw;
+  text-align: center;
+  margin-left: 29vh;
+  text-align: left;
+  margin-top: 5px;
+}
+.Simg {
+  width: 20vw;
+  vertical-align: sub;
+  position: relative;
+  margin-left: 70%;
+  margin-top: -90vh;
+}
+.column1 {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
+}
+}
+
 @media screen and (max-width: 600px) {
+  .Hbox {
+      width: 80%;
+      margin-left: 10%;
+      min-height: 40vh;
+      background: #E6E6E6;
+      margin-top: 10vw;
+      border-radius: 75px;
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+  #content{
+    font-size: 11px;
+    margin-right: 42vh;
+    margin-left: 5vh;
+    margin-top: 7vh;
+    width: 90vw;
+    height: 30vh;
+  }
+  
+  .Simg {
+    width: 25vw;
+  }
+  .Stext {
+    width: 65vw;
+    font-size: 19px !important;
+}
   .OSe {
     font-family: Coolvetica;
     font-style: normal;
@@ -1829,47 +2403,7 @@ margin: 5%;
     color: #000;
     margin-top: 1vh;
 }
-.EDA{
-  position: absolute;
-  width: 35vw;
-  height: 35vw;
-  left: 10vw;
-  margin-top: 35vh;    border-radius: 160.5px;
-  background-color:  #E63C4C;
-  border: none;
-}
-.AP{
-  position: absolute;
-  width: 35vw;
-  height: 35vw;
-  left: 55vw;
-  margin-top: 35vh;
-  border-radius: 160.5px;
-  background-color:  #FFC872;
-  border: none;
-}
 
-
-.KP{
-  position: absolute;
-  width: 35vw;
-  height: 35vw;
-  left: 10vw;
-  margin-top: 65vh;
-  border-radius: 160.5px;
-  background-color: #65C8D0;
-  border: none;
-}
-.MP{
-  position: absolute;
-  width: 35vw;
-  height: 35vw;
-  left: 55vw;
-margin-top: 65vh;
-  border-radius: 160.5px;
-  background-color:  #E63C4C;
-  border: none;
-}
 .column1 {
   -ms-flex: 50%;
   flex: 50%;
@@ -1877,10 +2411,39 @@ margin-top: 65vh;
 }
 }
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 540px) {
+.hTextBox {
+    font-family: Gill Sans MT;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+}
+#content{
+  font-size: 11px;
+  margin-right: 42vh;
+  margin-left: 5vh;
+  margin-top: 7vh;
+  width: 90vw;
+  height: 30vh;
+}
+.tT{
+  width: 52vw;
+  font-size: 35px;
+}
+.Simg {
+  width: 40vw;
+  vertical-align: sub;
+  position: relative;
+  margin-left: 30%;
+  margin-top: -2vh;
+}
+}
+@media screen and (max-width: 416px) {
   .Hbox{
-    width: 95vw;
-    height: 26vh;
+    width: 88vw;
+    min-height: 26vh;
     background:#E6E6E6;
     border-radius: 25px;
     margin-left: 0px;
@@ -1919,6 +2482,18 @@ margin-top: 65vh;
   margin-left: 22vh;
   text-align: left;
   margin-top: 0px;
+  }
+  #content{
+    font-size: 11px;
+    margin-right: 42vh;
+    margin-left: 5vh;
+    margin-top: 7vh;
+    width: 90vw;
+    height: 30vh;
+  }
+  .tT{
+    width: 52vw;
+    font-size: 35px;
   }
   .EDA{
     position: absolute;
@@ -1969,6 +2544,44 @@ margin-top: 65vh;
   line-height: 46px;
   color: #000000;
   }
+  .Aimg {
+    margin-top: 9vh;
+    margin-right: 45vw;
+    width: 18vh;
+    height: auto;
+    border: none;
+    margin-left: 0vw;
+}
+  #EDAt {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5vw;
+    line-height: 6vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+  .OSp {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6vw;
+    line-height: 6vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
   .carousel-indicators {
     position: absolute;
     /* right: 0; */
@@ -1984,13 +2597,95 @@ margin-top: 65vh;
     /* padding-left: 0; */
     /* margin-right: 15%; */
     margin-top: -2vw;
-    margin-left: 35vw;
+    margin-left: 40vw;
     list-style: none;
     width: 1vw;
   }
   
 }
+@media only screen and (max-width: 375px){
+#content{
+  font-size: 11px;
+  margin-right: 42vh;
+  margin-left: 5vh;
+  margin-top: 7vh;
+  width: 90vw;
+  height: 30vh;
+}
+.tT{
+  width: 52vw;
+  font-size: 35px;
+}
 
+.Simg {
+  width: 45vw;
+  vertical-align: sub;
+  position: relative;
+  margin-left: 30%;
+  margin-top: -7vh;
+}
+}
+@media only screen and (max-height: 375px){
+  #content{
+    font-size: 11px;
+    margin-right: 42vh;
+    margin-left: 5vh;
+    margin-top: 7vh;
+    width: 90vw;
+    height: 30vh;
+  }
+  .tT{
+    width: 52vw;
+    font-size: 35px;
+  }
+ .Simg{ 
+  width: 20vw;
+  vertical-align: sub;
+  position: relative;
+  margin-left: 70%;
+  margin-top: -70vh;
+}
+  .EDA{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    left: 7vw;
+    margin-top: 55vh;    border-radius: 160.5px;
+    background-color:  #E63C4C;
+    border: none;
+  }
+  .AP{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    left: 30vw;
+    margin-top: 55vh;
+    border-radius: 160.5px;
+    background-color:  #FFC872;
+    border: none;
+  }
+  
+  .KP{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    left: 53vw;
+    margin-top: 55vh;
+    border-radius: 160.5px;
+    background-color: #65C8D0;
+    border: none;
+  }
+  .MP{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    left: 76vw;
+    margin-top: 55vh;
+    border-radius: 160.5px;
+    background-color:  #E63C4C;
+    border: none;
+  } 
+}
 @media only screen and (max-width: 300px){
 .aTitleBox {
     font-family: Coolvetica;
@@ -2000,7 +2695,7 @@ margin-top: 65vh;
     line-height: 44px;
     margin-top: -27vh;
     //margin-right: 45vw;
-    margin-left: 45vw;
+    margin-left: 37vw;
 }
 .aTextBox {
     font-family: Gill Sans MT;
@@ -2014,7 +2709,7 @@ margin-top: 65vh;
 }
 .Hbox {
   width: 90vw;
-  height: 26vh;
+  min-height: 26vh;
   background: #E6E6E6;
   border-radius: 25px;
   margin-left: 0px;
@@ -2068,11 +2763,10 @@ margin-top: 70vh;
   -ms-flex: 0 1 auto;
   -webkit-box-flex: 0;
   flex: 0 1 auto;
-  width: 5vw;
-  height: 5vw;
+  width: 4vw;
+  height: 4vw;
   border-radius: 5rem;
   margin-top: -2vw;
-  margin-left: 2vw;
   text-indent: -999px;
   cursor: pointer;
   background-color: #b1abab;
@@ -2096,7 +2790,7 @@ margin-top: 70vh;
   /* padding-left: 0; */
   /* margin-right: 15%; */
   margin-top: -3vw;
-  margin-left: 30vw;
+  margin-left: 40vw;
   list-style: none;
   width: 1vw;
 }
@@ -2115,8 +2809,8 @@ margin-top: 70vh;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
-    line-height: 29px;
+    font-size: 28px;
+    line-height: 28px;
     color: white;
     -webkit-margin-after: 0em;
     margin-block-end: 0em;
@@ -2125,8 +2819,6 @@ margin-top: 70vh;
   font-family: Gill Sans MT;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
   position: relative;
   z-index: 999;
   margin-top: -2vw;
@@ -2154,15 +2846,33 @@ margin-top: 70vh;
     animation-delay: 5s;
     animation-duration: 5s;
   }
-  .WRT{
-
+  .OS {
+    position: relative;
+    width: 100vw;
+    min-height: 120vh;
+    padding-bottom: 10vh;
+    background-color: #f6f6f6;
+    display: -ms-grid;
+    display: grid;
+    display: block;
+}
+  .WRT {
+    position: relative;
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 15vh;
+    padding: 10vh;
+}
+  #ContactT{
     position: relative;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
     font-size: 46px;
     line-height: 43px;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
   .ibutton  {
     height: 10vw;
@@ -2189,14 +2899,11 @@ margin-top: 70vh;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 46px;
-    line-height: 43px;
     margin-top: 4vh;
     }
   .WDp{
     margin-bottom: -2vh;
     margin-top: -2vh;
-    font-size: 20px;
     }
     .Hbox{
       max-width: 80%;
@@ -2214,7 +2921,7 @@ margin-top: 70vh;
       font-family: Coolvetica;
       font-style: normal;
       font-weight: normal;
-      font-size: 48px;
+      font-size: 35px;
       line-height: 0px;
       margin-top: -6vw;
       margin-bottom: -1vw;
@@ -2245,7 +2952,6 @@ margin-top: 70vh;
           margin-top: -2vw;
           margin-left: 40vw;
           list-style: none;
-          width: 1vw;
         }
   .OST{
     font-family: Coolvetica;
@@ -2289,7 +2995,6 @@ line-height: 4vw;
     font-family: Coolvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 46px;
     margin-top: -2vw;
   }
   .cont{
@@ -2350,12 +3055,9 @@ line-height: 4vw;
   .STot{
     font-family: Gill Sans MT;
     font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 10px;
+    font-weight: normal;
     text-align: center;
     color: #000000;
-    width: 63vw;
     margin-top: 0vw;
     margin-left: 25vw;
   }
@@ -2504,14 +3206,14 @@ line-height: 4vw;
 }
 .Abox{
 width: 90%;
-height: 36vh;
+max-height: 36vh;
 background:#E6E6E6;
 border-radius: 50px;
 margin-left: 0px;
 padding-left: 0px;
 margin: 5%;
 margin-top: -3vh;
-
+padding-bottom: 10vh;
 }
 
 .Aimg{
@@ -2548,7 +3250,9 @@ margin-top: -3vh;
   margin-top: 3px;
   }
 .Areas{
-  min-height: 100vh !important;
+  max-height: 248vh;
+  min-height: 70vh;
+  padding-bottom: 10vh;
   position: relative;
   min-width: 100vw;
   background-color: #f6f6f6;
@@ -2600,6 +3304,7 @@ margin-top: -3vh;
   background: rgba(232, 60, 76, 0.96);
   padding-bottom: 30px;
   display: inline-block;
+  margin-bottom: 10vh;
 } 
 #cntinput{
   margin-top: -10vh;
@@ -2611,5 +3316,4 @@ margin-top: -3vh;
   width: 25vw;
   height: 15vh; 
 } 
-
 }

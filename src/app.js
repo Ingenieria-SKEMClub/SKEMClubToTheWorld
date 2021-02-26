@@ -21,23 +21,7 @@ function myFunction() {
   x = x += 1;
   //console.log(x);
 }
-/*
-window.onscroll=function(){
-  console.log( 
-    'top: '  + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
-    'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
-  );
-}
-function winS(){
-  console.log("No sea malcriado");
 
-document.addEventListener('scroll',
-  (event) => {
-  }, 
-  { passive: true }
-);
-console.log(event);
-}*/
 
 //Change the backgound color by interval💢🐦
 function changeColor() {
@@ -219,11 +203,14 @@ class SkemCW extends React.Component {
       systemPosition: x,
       isUserUsingSystems: true,
     });
+    document.body.style.overflow = 'hidden';
   }
   goBackSystem() {
     this.setState({
       isUserUsingSystems: false,
     });
+    document.body.style.overflow = "scroll";
+
   }
 
   useWindowsize() {
@@ -232,6 +219,7 @@ class SkemCW extends React.Component {
     document.getElementById('size').innerHTML =
       'height: ' + h + ', width: ' + w;
   }
+
 
   back() {
     var width = document.documentElement.clientWidth;
@@ -497,7 +485,7 @@ class SkemCW extends React.Component {
                 color: this.state.systemPosition < 5 ? 'white' : 'black',
               }}
             >
-              chevron_left
+              close
             </i>
           </button>
           <button
@@ -534,18 +522,22 @@ class SkemCW extends React.Component {
               chevron_left
             </i>
           </button>
-          <div id="image">
-            <img
-              class="Simg"
-              src={this.state.systemImages[this.state.systemPosition]}
-            ></img>
-          </div>
           <div id="content">
-            <h1>
+            <h1 className="tT">
               <b>{this.state.systemMatrix[this.state.systemPosition][0]}</b>
             </h1>
-            <h2>{this.state.systemMatrix[this.state.systemPosition][1]}</h2>
+            <h2 class="Stext">{this.state.systemMatrix[this.state.systemPosition][1]}</h2>
+            <img
+          
+          class="Simg"
+          src={this.state.systemImages[this.state.systemPosition]}
+        ></img>
+
           </div>
+      <div   id="image">
+      
+      </div>
+
         </div>
         <div className="contenedor" id="bgc" onScroll="myFunction()">
           <div class="navbar-fixed">
@@ -733,61 +725,65 @@ class SkemCW extends React.Component {
             <div class="row" id="first">
               <div class="center-align" className="center">
                 <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header white-text" id="github">
+                    <img src="../public/IMG/github.png" className="ico" width="28px" height="28px"></img>
+                    GitHub
+                    </div>
+                    <div class="collapsible-body">
+                      <span>
+                        Trabajar con el club ha sido una experiencia agradable,
+                        los/las chicos(as) trabajan con mucha dedicación por
+                        crear herramientas y soluciones reales en tiempos
+                        record.
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header white-text" id="behance">
+                    <img src="../public/IMG/behance.png" className="ico" width="28px" height="28px"></img>
+                    Behance
+                    </div>
+                    <div class="collapsible-body">
+                      <span>
+                        Trabajar con el club ha sido una experiencia agradable,
+                        los/las chicos(as) trabajan con mucha dedicación por
+                        crear herramientas y soluciones reales en tiempos
+                        record.
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header white-text" id="face">
+                    <img src="../public/IMG/Facebook.png" className="ico" width="28px" height="28px"></img>
+                    Facebook
+                    </div>
+                    <div class="collapsible-body">
+                      <span>
+                        Trabajar con el club ha sido una experiencia agradable,
+                        los/las chicos(as) trabajan con mucha dedicación por
+                        crear herramientas y soluciones reales en tiempos
+                        record.
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header white-text" id="insta">
+                    <img src="../public/IMG/instagram.png" className="ico" width="28px" height="28px"></img>
+                    Instagram
+                    </div>
+                    <div class="collapsible-body">
+                      <span>
+                        Trabajar con el club ha sido una experiencia agradable,
+                        los/las chicos(as) trabajan con mucha dedicación por
+                        crear herramientas y soluciones reales en tiempos
+                        record.
+                      </span>
+                    </div>
+                  </li>
                   <li>
                     <div class="collapsible-header #dd2c00 deep-orange accent-4 white-text">
-                      <i class="material-icons">slideshow</i>YouTube
-                    </div>
-                    <div class="collapsible-body">
-                      <span>
-                        Trabajar con el club ha sido una experiencia agradable,
-                        los/las chicos(as) trabajan con mucha dedicación por
-                        crear herramientas y soluciones reales en tiempos
-                        record.
-                      </span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="collapsible-header  #01579b light-blue darken-4 white-text">
-                      <i class="material-icons">thumb_up</i>Facebook
-                    </div>
-                    <div class="collapsible-body">
-                      <span>
-                        Trabajar con el club ha sido una experiencia agradable,
-                        los/las chicos(as) trabajan con mucha dedicación por
-                        crear herramientas y soluciones reales en tiempos
-                        record.
-                      </span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="collapsible-header #aa00ff purple accent-4 white-text">
-                      <i class="material-icons">photo_camera</i>Instagram
-                    </div>
-                    <div class="collapsible-body">
-                      <span>
-                        Trabajar con el club ha sido una experiencia agradable,
-                        los/las chicos(as) trabajan con mucha dedicación por
-                        crear herramientas y soluciones reales en tiempos
-                        record.
-                      </span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="collapsible-header #212121 grey darken-4 white-text">
-                      <i class="material-icons">code</i>GitHub
-                    </div>
-                    <div class="collapsible-body">
-                      <span>
-                        Trabajar con el club ha sido una experiencia agradable,
-                        los/las chicos(as) trabajan con mucha dedicación por
-                        crear herramientas y soluciones reales en tiempos
-                        record.
-                      </span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="collapsible-header #80d8ff light-blue accent-1 white-text">
-                      <i class="material-icons">view_carousel</i>Behance
+                      <i class="material-icons">play_arrow</i>YouTube
                     </div>
                     <div class="collapsible-body">
                       <span>
@@ -1036,7 +1032,7 @@ class SkemCW extends React.Component {
                 data-target="#carousel-with-lb"
                 data-slide-to="0"
                 id="uno"
-                onClick={() => this.ol(1)}
+                onClick={() => this.ol(1)} 
               ></li>
               <li
                 data-target="#carousel-with-lb"
@@ -1062,7 +1058,7 @@ class SkemCW extends React.Component {
                 onClick={() => this.back()}
               >
                 <i class="material-icons medium white-text left">
-                  chevron_left
+                close
                 </i>
                 {this.state.SystemName}
               </button>
@@ -1167,7 +1163,7 @@ class SkemCW extends React.Component {
                 </buttom>
               </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 l6">
               <div class="center-align">
                 <buttom className="Abox" id="ar" onClick={() => this.OS(8)}>
                   <div class="center-align">
@@ -1188,7 +1184,7 @@ class SkemCW extends React.Component {
                 </buttom>
               </div>
             </div>
-            <div class="col s12 l4">
+            <div class="col s12 l6">
               <div class="center-align">
                 <buttom className="Abox" id="li" onClick={() => this.OS(9)}>
                   <div class="center-align">
@@ -1255,7 +1251,7 @@ class SkemCW extends React.Component {
           </div>
           <div class="center-align">
             <form class="row" className="cnt" onSubmit={this.handleSubmit}>
-              <p className="WRT">¡Contáctenos!</p>
+              <p id="ContactT">¡Contáctenos!</p>
               <div class="col s12">
                 <div class="row cadr-panel">
                   <div class="input-field col s12 l6 ">
