@@ -507,7 +507,7 @@ class SkemCW extends React.Component {
           </button>
           <button
             class="center-align white-text"
-            className="kpbtnb"
+            className="kpbtn"
             onClick={() => {
               this.OS(2);
             }}
@@ -1111,9 +1111,7 @@ class SkemCW extends React.Component {
                     <div className="aTitleBox">
                       <h3>Ciencia</h3>
                     </div>
-                    <h3 className="aTextBox">
-                      Andre perdon por ser tan rico :3
-                    </h3>
+                   
                     <button className="Abutton" onClick={() => this.OS(5)}>
                       ¡Descubre más!
                     </button>
@@ -1132,9 +1130,7 @@ class SkemCW extends React.Component {
                     <div className="aTitleBox">
                       <h3>Ingenieria</h3>
                     </div>
-                    <h3 className="aTextBox">
-                      Andre perdon por ser tan rico :3
-                    </h3>
+                    
                     <button className="Abutton" onClick={() => this.OS(6)}>
                       ¡Descubre más!
                     </button>
@@ -1153,9 +1149,7 @@ class SkemCW extends React.Component {
                     <div className="aTitleBox">
                       <h3 id="DS">Desarrollo Sostenible</h3>
                     </div>
-                    <h3 className="aTextBox">
-                      Andre perdon por ser tan rico :3
-                    </h3>
+                   
                     <button className="Abutton" onClick={() => this.OS(7)}>
                       ¡Descubre más!
                     </button>
@@ -1174,9 +1168,7 @@ class SkemCW extends React.Component {
                     <div className="aTitleBox">
                       <h3>Arte</h3>
                     </div>
-                    <h3 className="aTextBox">
-                      Andre perdon por ser tan rico :3
-                    </h3>
+                   
                     <button className="Abutton" onClick={() => this.OS(8)}>
                       ¡Descubre más!
                     </button>
@@ -1195,9 +1187,7 @@ class SkemCW extends React.Component {
                     <div className="aTitleBox">
                       <h3>Liderazgo</h3>
                     </div>
-                    <h3 className="aTextBox">
-                      Andre perdon por ser tan rico :3
-                    </h3>
+                   
                     <button className="Abutton" onClick={() => this.OS(9)}>
                       ¡Descubre más!
                     </button>

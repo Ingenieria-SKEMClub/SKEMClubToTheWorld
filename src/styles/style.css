@@ -910,7 +910,6 @@ video {
 .Areas {
   position: relative;
   width: 100vw;
-  max-height: 248vh;
   min-height: 70vh;
   padding-bottom: 10vh;
   background-color: #f6f6f6;
@@ -1859,7 +1858,6 @@ video {
     margin-top: 5px;
   }
   .Areas {
-    max-height: 248vh;
     position: relative;
     min-height: 70vh;
     padding-bottom: 10vh;
@@ -2313,13 +2311,13 @@ video {
     margin-left: 25vw;
   }
   .Abox {
-    width: 90%;
-    max-height: 36vh;
+    width: 50%;
+    height: 57vh;
     background: #E6E6E6;
     border-radius: 50px;
-    margin-left: 0px;
     padding-left: 0px;
     margin: 5%;
+    margin-left: 25%;
     padding-bottom: 10vh;
   }
   .Aimg {
@@ -2342,7 +2340,7 @@ video {
   }
   .aTitleBox h3 {
     margin-bottom: 0px;
-    font-size: 28px;
+    font-size: 20px;
   }
   .aTextBox {
     font-family: Gill Sans MT;
@@ -2356,13 +2354,13 @@ video {
     margin-top: 3px;
   }
   .Areas {
-    max-height: 248vh;
     min-height: 70vh;
     padding-bottom: 10vh;
     position: relative;
     min-width: 100vw;
     background-color: #f6f6f6;
     display: inline-block;
+    padding-bottom: 10vh;
   }
   #ci {
     background-color: #386FCB;
@@ -2420,8 +2418,41 @@ video {
   }
 }
 
+@media screen and (max-width: 400px) and (max-height: 500px) {
+  .Abox {
+    width: 90%;
+    height: 50vh;
+    background: #E6E6E6;
+    border-radius: 50px;
+    padding-left: 0px;
+    margin: 5%;
+    margin-bottom: 10vh;
+  }
+  .aTitleBox {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 44px;
+    margin-top: -20vh;
+    margin-left: 38vw;
+  }
+  .Stext {
+    width: 80vw !important;
+  }
+}
+
+@media screen and (max-width: 500px) and (max-height: 320px) {
+  .aTitleBox h3 {
+    margin-left: -5vw;
+  }
+}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-height: 600px) {
+  h1 {
+    font-size: 28px;
+  }
   .Hbox {
     width: 80%;
     margin-left: 10%;
@@ -2441,14 +2472,18 @@ video {
     height: 30vh;
   }
   .Stext {
-    width: 60vw;
+    width: 50vw;
+  }
+  #systems h2 {
+    font-size: 16px;
   }
   .Simg {
     width: 40vw;
     vertical-align: sub;
     position: relative;
-    margin-left: 30%;
-    margin-top: -2vh;
+    width: 20vw;
+    margin-left: 70%;
+    margin-top: -90vh;
   }
   .OSe {
     font-family: Coolvetica;
@@ -2479,6 +2514,7 @@ video {
     font-weight: normal;
     font-size: 2vw;
     line-height: 3vw;
+    margin-top: 5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2539,10 +2575,9 @@ video {
   .Aimg {
     margin-top: 9vh;
     margin-right: 49vw;
-    width: 18vh;
+    width: 30vh;
     height: auto;
     border: none;
-    margin-left: -15vw;
   }
   .aTextBox {
     font-family: Gill Sans MT;
@@ -2554,13 +2589,6 @@ video {
     margin-left: 29vh;
     text-align: left;
     margin-top: 5px;
-  }
-  .Simg {
-    width: 20vw;
-    vertical-align: sub;
-    position: relative;
-    margin-left: 70%;
-    margin-top: -90vh;
   }
   .column1 {
     -ms-flex: 50%;
@@ -2594,7 +2622,9 @@ video {
   }
   .Stext {
     width: 65vw;
-    font-size: 19px !important;
+  }
+  #systems h2 {
+    font-size: 12px;
   }
   .OSe {
     font-family: Coolvetica;
@@ -2653,7 +2683,7 @@ video {
     min-height: 26vh;
     background: #E6E6E6;
     border-radius: 25px;
-    margin-left: 0px;
+    margin-left: 13px;
     margin-top: 5vw;
     padding-left: 0px;
   }
@@ -2809,6 +2839,49 @@ video {
   }
 }
 
+@media only screen and (max-width: 1000px) and (max-height: 600px) and (min-width: 700px) {
+  .Abox {
+    width: 50%;
+    height: 50vh;
+    background: #E6E6E6;
+    border-radius: 50px;
+    padding-left: 0px;
+    margin: 5%;
+    margin-left: 25%;
+    padding-bottom: 10vh;
+  }
+  .aTitleBox {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 44px;
+    margin-top: -25vh;
+    margin-right: 35vw;
+    margin-left: 40vh;
+  }
+  .Simg {
+    width: 40vw;
+    vertical-align: sub;
+    position: relative;
+    width: 20vw;
+    margin-left: 70%;
+    margin-top: -30vh;
+  }
+}
+
+@media only screen and (width: 600px) and (height: 1024px) {
+  .Abox {
+    width: 90%;
+    height: 25vh;
+    background: #E6E6E6;
+    border-radius: 50px;
+    padding-left: 0px;
+    margin: 5%;
+    padding-bottom: 10vh;
+  }
+}
+
 @media only screen and (max-width: 375px) {
   #content {
     font-size: 11px;
@@ -2850,6 +2923,19 @@ video {
     position: relative;
     margin-left: 70%;
     margin-top: -70vh;
+  }
+  .OSe {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    margin-top: -9vh;
   }
   .EDA {
     position: absolute;
@@ -2941,6 +3027,17 @@ video {
     border-radius: 160.5px;
     background-color: #FFC872;
     border: none;
+  }
+  .Aimg {
+    margin-top: 9vh;
+    margin-right: 45vw;
+    width: 18vh;
+    height: auto;
+    border: none;
+    margin-left: 0vw;
+  }
+  .Abox {
+    min-height: 30vh;
   }
   .KP {
     position: absolute;
@@ -3418,14 +3515,13 @@ video {
     margin-left: 25vw;
   }
   .Abox {
-    width: 90%;
+    width: 50%;
     max-height: 36vh;
     background: #E6E6E6;
     border-radius: 50px;
-    margin-left: 0px;
-    padding-left: 0px;
     margin: 5%;
-    margin-top: -3vh;
+    margin-left: 25vw;
+    padding-left: 0px;
     padding-bottom: 10vh;
   }
   .Aimg {
@@ -3462,8 +3558,7 @@ video {
     margin-top: 3px;
   }
   .Areas {
-    max-height: 248vh;
-    min-height: 70vh;
+    min-height: 100vh;
     padding-bottom: 10vh;
     position: relative;
     min-width: 100vw;
@@ -3506,10 +3601,14 @@ video {
     width: 23vw;
     vertical-align: sub;
     position: relative;
-    margin-left: 17%;
+    margin-top: -35%;
+    margin-left: 70%;
   }
-  #systems {
-    height: 100%;
+  .Stext {
+    width: 50vw;
+  }
+  #systems h2 {
+    font-size: 12px !important;
   }
   .cnt {
     position: relative;
